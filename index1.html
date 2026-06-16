@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Builtcom Cadet Program</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap');:root{--black:#0a0a0a;--dark:#111111;--dark2:#1a1a1a;--dark3:#222222;--mid:#2e2e2e;--border:#333;--text:#e8e8e8;--muted:#888;--lime:#c6e50a;--teal:#1a7a6e;--white:#ffffff;--yellow:#f0d000}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--black);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;overflow-x:hidden}nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,10,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:60px}.nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:900;letter-spacing:2px;color:var(--white)}.nav-logo span{color:var(--lime)}.nav-links{display:flex;gap:0}.nav-links a{color:var(--muted);font-size:0.75rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:0 1rem;height:60px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s}.nav-links a:hover,.nav-links a.active{color:var(--lime);border-bottom-color:var(--lime)}.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}.hamburger span{width:24px;height:2px;background:var(--white);transition:0.3s}#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:6rem 4rem 5rem;background:linear-gradient(160deg,#0d2e28 0%,#1a3a10 40%,#0a0a0a 100%);position:relative;overflow:hidden}.hero-grid{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(var(--lime) 1px,transparent 1px),linear-gradient(90deg,var(--lime) 1px,transparent 1px);background-size:60px 60px}.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(198,229,10,0.12);border:1px solid rgba(198,229,10,0.3);color:var(--lime);font-size:0.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:2px;margin-bottom:1.5rem}.hero-badge::before{content:'';width:6px;height:6px;background:var(--lime);border-radius:50%}#hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3.5rem,10vw,8rem);font-weight:900;line-height:0.9;letter-spacing:-1px;color:var(--white);margin-bottom:1.5rem;text-transform:uppercase}#hero h1 em{color:var(--lime);font-style:normal;display:block}.hero-meta{display:flex;gap:3rem;margin-bottom:3rem}.hero-stat{}.hero-stat strong{display:block;font-size:2rem;font-weight:900;color:var(--lime);line-height:1}.hero-stat span{font-size:0.75rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase}.hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--black);font-weight:700;font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;padding:14px 28px;text-decoration:none;transition:0.2s}.hero-cta:hover{background:var(--white)}.scroll-hint{position:absolute;bottom:2rem;right:4rem;font-size:0.7rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:8px}.scroll-hint::after{content:'';display:inline-block;width:1px;height:40px;background:linear-gradient(to bottom,var(--muted),transparent)}section{padding:5rem 4rem}.section-eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--lime);margin-bottom:1rem}.section-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;text-transform:uppercase;color:var(--white);line-height:1;margin-bottom:2rem}.divider{width:40px;height:3px;background:var(--lime);margin-bottom:2rem}#values{background:var(--dark)}.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;margin-top:3rem;background:var(--border)}.value-card{background:var(--dark2);padding:2.5rem;transition:background 0.2s}.value-card:hover{background:var(--dark3)}.value-number{font-family:'Barlow Condensed',sans-serif;font-size:3.5rem;font-weight:900;color:rgba(198,229,10,0.15);line-height:1;margin-bottom:0.5rem}.value-card h3{font-size:1rem;font-weight:700;color:var(--lime);margin-bottom:0.75rem}.value-card p{font-size:0.9rem;color:var(--muted);line-height:1.7}#about{background:var(--black)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}.about-text p{color:var(--muted);margin-bottom:1rem;font-size:0.95rem;line-height:1.8}.about-missions{display:flex;flex-direction:column;gap:1.5rem}.mission-block{border-left:3px solid var(--lime);padding-left:1.5rem}.mission-block h4{color:var(--lime);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.5rem}.mission-block p{color:var(--text);font-size:0.9rem;line-height:1.7}.structure-list{margin-top:2rem}.structure-item{display:flex;align-items:flex-start;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border)}.structure-item:last-child{border-bottom:none}.struct-num{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:900;color:var(--lime);min-width:2rem;line-height:1}.struct-body h5{color:var(--white);font-size:0.9rem;margin-bottom:0.25rem}.struct-body span{color:var(--muted);font-size:0.8rem}#program{background:var(--dark)}.program-intro{max-width:680px;margin-bottom:3rem}.program-intro p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:1rem}.rotation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-bottom:3rem}.rotation-card{background:var(--dark2);border:1px solid var(--border);padding:1.5rem;position:relative;overflow:hidden}.rotation-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--lime)}.rotation-card h4{color:var(--white);font-size:0.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem}.rotation-card ul{list-style:none}.rotation-card li{color:var(--muted);font-size:0.85rem;padding:0.3rem 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;gap:0.5rem}.rotation-card li::before{content:'+';color:var(--lime);font-weight:700}#modules{background:var(--black)}.tabs-nav{display:flex;gap:0;flex-wrap:wrap;margin-bottom:0;border-bottom:1px solid var(--border)}.tab-btn{background:none;border:none;color:var(--muted);font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;padding:1rem 1.5rem;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;white-space:nowrap}.tab-btn:hover{color:var(--text)}.tab-btn.active{color:var(--lime);border-bottom-color:var(--lime)}.tab-content{display:none;padding-top:2.5rem}.tab-content.active{display:block}.module-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem}.module-block{}.module-block h4{font-size:0.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--lime);margin-bottom:1rem;margin-top:1.5rem}.module-block h4:first-child{margin-top:0}.module-block p{color:var(--muted);font-size:0.9rem;line-height:1.7;margin-bottom:0.75rem}.bullet-list{list-style:none}.bullet-list li{color:var(--muted);font-size:0.875rem;padding:0.3rem 0;display:flex;align-items:flex-start;gap:0.6rem;line-height:1.5;border-bottom:1px solid rgba(255,255,255,0.04)}.bullet-list li::before{content:'+';color:var(--lime);font-weight:700;flex-shrink:0;margin-top:1px}.quiz-block{background:var(--yellow);padding:1.5rem;margin-top:1.5rem}.quiz-block h4{color:var(--black);font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem}.quiz-q{margin-bottom:1.2rem}.quiz-q p{color:var(--black);font-size:0.875rem;font-weight:600;margin-bottom:0.5rem}.quiz-q .opts{display:flex;flex-direction:column;gap:3px}.quiz-q .opts span{color:rgba(0,0,0,0.6);font-size:0.8rem;padding:2px 0}.quiz-q .opts span.correct{color:#006600;font-weight:700}.key-resp{background:var(--dark2);border:1px solid var(--border);padding:1.5rem;margin-top:1.5rem}.key-resp h4{color:var(--white);font-size:0.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem}#career{background:var(--dark);overflow-x:auto}.pathway-wrapper{overflow-x:auto;padding-bottom:2rem}.pathway-levels{display:flex;gap:0;min-width:1000px}.level-col{flex:1;min-width:130px;padding:0 0.5rem}.level-header{text-align:center;margin-bottom:1.5rem}.level-label{font-size:0.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lime);display:block;margin-bottom:0.25rem}.level-exp{font-size:0.65rem;color:var(--muted)}.role-cards{display:flex;flex-direction:column;gap:0.6rem}.role-card{background:var(--dark2);border:1px solid var(--border);padding:0.75rem;text-align:center;font-size:0.75rem;font-weight:600;color:var(--text);line-height:1.3;transition:border-color 0.2s,background 0.2s;cursor:default}.role-card:hover{border-color:var(--lime);background:var(--dark3)}.role-card.highlight{border-color:var(--lime);background:rgba(198,229,10,0.08);color:var(--lime)}.level-divider{width:1px;background:var(--border);margin:0 0.25rem}#eligibility{background:var(--black)}.elig-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}.elig-block p{color:var(--muted);font-size:0.9rem;line-height:1.8;margin-bottom:1rem}.callout{background:rgba(198,229,10,0.08);border-left:3px solid var(--lime);padding:1.25rem 1.5rem;margin:1.5rem 0}.callout p{color:var(--text);font-size:0.875rem;margin:0}.callout strong{color:var(--lime)}#stories{background:var(--dark)}.stories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem}.story-card{background:var(--dark2);border:1px solid var(--border);padding:2rem;transition:border-color 0.2s}.story-card:hover{border-color:var(--lime)}.story-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}.story-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--lime));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;color:var(--black);flex-shrink:0}.story-meta h4{color:var(--white);font-size:0.9rem;font-weight:700;margin-bottom:0.15rem}.story-meta span{color:var(--lime);font-size:0.75rem}.story-role{color:var(--muted);font-size:0.75rem}.story-card p{color:var(--muted);font-size:0.875rem;line-height:1.7;font-style:italic}.story-card p::before{content:'"';font-size:1.5rem;color:var(--lime);line-height:0;vertical-align:-0.4rem;margin-right:3px}#safety{background:var(--black)}.safety-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem}.safety-card{background:var(--dark2);border:1px solid var(--border);padding:1.75rem;display:flex;gap:1rem}.safety-num{font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:var(--lime);min-width:2.5rem;line-height:1}.safety-body h4{color:var(--white);font-size:0.9rem;font-weight:700;margin-bottom:0.5rem}.safety-body p{color:var(--muted);font-size:0.85rem;line-height:1.6;margin-bottom:0.75rem}.safety-tips{list-style:none}.safety-tips li{color:var(--muted);font-size:0.8rem;padding:0.2rem 0;display:flex;gap:0.5rem}.safety-tips li::before{content:'+';color:var(--lime);font-weight:700;flex-shrink:0}#undertaking{background:var(--dark)}.undertaking-box{background:var(--dark2);border:1px solid var(--border);max-width:700px;padding:3rem}.undertaking-box h3{color:var(--white);font-size:1.1rem;font-weight:700;margin-bottom:1.5rem}.undertaking-box ul{list-style:none;margin-bottom:2rem}.undertaking-box li{padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.9rem;color:var(--muted);display:flex;gap:0.75rem;align-items:flex-start}.undertaking-box li::before{content:'+';color:var(--lime);font-weight:700;flex-shrink:0}.sig-line{display:flex;gap:3rem;margin-top:2rem}.sig-field{flex:1}.sig-field label{display:block;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem}.sig-field .line{height:1px;background:var(--border);margin-top:2rem}footer{background:var(--dark);border-top:1px solid var(--border);padding:3rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}.footer-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;color:var(--white);letter-spacing:2px}.footer-logo span{color:var(--lime)}.footer-contact{text-align:right}.footer-contact p{color:var(--muted);font-size:0.8rem;line-height:1.8}.footer-contact a{color:var(--lime);text-decoration:none}.footer-copy{color:var(--muted);font-size:0.75rem;width:100%;text-align:center;padding-top:1rem;border-top:1px solid var(--border)}@media (max-width:900px){section{padding:3rem 1.5rem}#hero{padding:5rem 1.5rem 3rem}.about-grid,.module-layout,.elig-grid{grid-template-columns:1fr;gap:2rem}.nav-links{display:none;flex-direction:column;position:fixed;top:60px;left:0;right:0;background:var(--dark);padding:1rem}.nav-links.open{display:flex}.nav-links a{height:auto;padding:0.75rem 1rem;border-bottom:1px solid var(--border);border-right:none}.hamburger{display:flex}footer{flex-direction:column;text-align:center;padding:2rem 1.5rem}.footer-contact{text-align:center}.hero-meta{gap:1.5rem}}.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s,transform 0.6s}.fade-in.visible{opacity:1;transform:none}.quiz-interactive{background:var(--dark2);border:1px solid var(--border);padding:1.5rem;margin-top:1.5rem}.quiz-interactive h4{color:var(--yellow);font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.25rem}.quiz-item{margin-bottom:1.5rem}.quiz-item p{color:var(--text);font-size:0.875rem;font-weight:600;margin-bottom:0.75rem}.quiz-options{display:flex;flex-direction:column;gap:6px}.quiz-opt{background:var(--dark3);border:1px solid var(--border);color:var(--muted);font-size:0.8rem;padding:0.6rem 1rem;cursor:pointer;text-align:left;transition:0.15s;font-family:'Inter',sans-serif}.quiz-opt:hover{border-color:var(--lime);color:var(--text)}.quiz-opt.correct{background:rgba(0,150,0,0.15);border-color:#00aa00;color:#00cc00}.quiz-opt.wrong{background:rgba(200,0,0,0.12);border-color:#aa0000;color:#ff4444}.quiz-feedback{font-size:0.8rem;margin-top:0.5rem;font-weight:600}.quiz-feedback.ok{color:#00cc00}.quiz-feedback.no{color:#ff4444}</style>
+
+
+/* ── NAV ACADEMY BUTTON ── */
+.nav-academy-btn {
+  background: var(--lime);
+  color: var(--black);
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: 0.15s;
+  white-space: nowrap;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+.nav-academy-btn:hover { background: #d8f700; }
+
+/* ── LOGIN OVERLAY ── */
+#login-overlay {
+  position: fixed; inset: 0; z-index: 9000;
+  background: #080808;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+#login-overlay.visible { display: flex; }
+.login-card {
+  width: 100%; max-width: 420px;
+  background: #111;
+  border: 1px solid #2a2a2a;
+  padding: 2.5rem 2.5rem 2rem;
+  position: relative;
+}
+.login-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.5rem; font-weight: 900; letter-spacing: 3px;
+  color: #fff; text-align: center; margin-bottom: 4px;
+}
+.login-logo span { color: #c8e600; }
+.login-sub {
+  font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase;
+  color: #555; text-align: center; margin-bottom: 2rem;
+}
+.login-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.6rem; font-weight: 800; text-transform: uppercase;
+  color: #fff; margin-bottom: 0.25rem;
+}
+.login-desc { font-size: 0.82rem; color: #666; margin-bottom: 2rem; line-height: 1.5; }
+.login-field { margin-bottom: 1.25rem; }
+.login-field label {
+  display: block; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: #787878; margin-bottom: 0.5rem;
+}
+.login-field input {
+  width: 100%; background: #1a1a1a; border: 1px solid #2a2a2a;
+  color: #e2e2e2; font-size: 0.9rem; font-family: 'Inter', sans-serif;
+  padding: 12px 14px; outline: none; transition: 0.15s;
+}
+.login-field input:focus { border-color: #c8e600; }
+.login-field input::placeholder { color: #444; }
+.login-btn {
+  width: 100%; background: #c8e600; color: #080808;
+  border: none; font-family: 'Inter', sans-serif;
+  font-size: 0.9rem; font-weight: 700; padding: 14px;
+  cursor: pointer; transition: 0.15s; margin-top: 0.5rem; letter-spacing: 0.5px;
+}
+.login-btn:hover { background: #d8f700; }
+.login-err {
+  background: rgba(192,57,43,0.1); border-left: 3px solid #c0392b;
+  color: #f87171; font-size: 0.8rem; padding: 0.7rem 1rem;
+  margin-bottom: 1rem; display: none;
+}
+.login-err.show { display: block; }
+.login-close {
+  position: absolute; top: 1rem; right: 1rem;
+  background: none; border: none; color: #555; font-size: 1.1rem;
+  cursor: pointer; padding: 4px 8px; transition: 0.15s;
+}
+.login-close:hover { color: #fff; }
+.login-note { font-size: 0.72rem; color: #444; text-align: center; margin-top: 1.25rem; }
+
+/* ── ACADEMY OVERLAY ── */
+#academy-overlay {
+  position: fixed; inset: 0; z-index: 8000;
+  background: #080808;
+  display: none;
+  flex-direction: column;
+}
+#academy-overlay.visible { display: flex; }
+.acad-topbar {
+  height: 56px; background: #0f0f0f; border-bottom: 1px solid #1e1e1e;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 1.5rem; flex-shrink: 0;
+}
+.acad-topbar-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem; font-weight: 900; letter-spacing: 2px; color: #fff;
+}
+.acad-topbar-logo span { color: #c8e600; }
+.acad-topbar-right { display: flex; align-items: center; gap: 1rem; }
+.acad-user { font-size: 0.75rem; color: #787878; }
+.acad-user strong { color: #e2e2e2; }
+.acad-exit-btn {
+  background: none; border: 1px solid #2a2a2a; color: #787878;
+  font-size: 0.72rem; font-family: 'Inter', sans-serif;
+  padding: 6px 14px; cursor: pointer; transition: 0.15s; letter-spacing: 0.5px;
+}
+.acad-exit-btn:hover { border-color: #555; color: #e2e2e2; }
+.acad-body { flex: 1; overflow: hidden; display: flex; flex-direction: column; }
+
+/* ── ACADEMY INNER SCREENS ── */
+:root {
+  --black-a:#080808; --d1-a:#0f0f0f; --d2-a:#161616; --d3-a:#1e1e1e; --d4-a:#272727;
+  --border-a:#2a2a2a; --border2-a:#363636; --text-a:#e2e2e2; --muted-a:#787878; --muted2-a:#555;
+  --lime-a:#c8e600; --lime2-a:#a8c200; --green-a:#1a9e6e; --red-a:#c0392b; --yellow-a:#e8c000;
+}
+#academy-overlay .screen { display: none; min-height: 0; flex: 1; overflow: hidden; }
+#academy-overlay .screen.active { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+#academy-overlay .app-shell { display: flex; flex: 1; overflow: hidden; }
+#academy-overlay .sidebar {
+  width: 250px; flex-shrink: 0; background: #0f0f0f;
+  border-right: 1px solid #2a2a2a; display: flex; flex-direction: column; overflow-y: auto;
+}
+#academy-overlay .sb-header { padding: 1.25rem 1.25rem 0.9rem; border-bottom: 1px solid #2a2a2a; }
+#academy-overlay .sb-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 900; letter-spacing: 2px; color: #fff; }
+#academy-overlay .sb-logo span { color: #c8e600; }
+#academy-overlay .sb-sub { font-size: 0.62rem; color: #555; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+#academy-overlay .sb-progress { padding: 0.9rem 1.25rem; border-bottom: 1px solid #2a2a2a; }
+#academy-overlay .sb-progress-label { display: flex; justify-content: space-between; align-items: center; font-size: 0.65rem; color: #555; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+#academy-overlay .sb-progress-label strong { color: #c8e600; font-size: 0.82rem; }
+#academy-overlay .progress-bar { height: 4px; background: #272727; overflow: hidden; }
+#academy-overlay .progress-fill { height: 100%; background: #c8e600; transition: width 0.4s; }
+#academy-overlay .sb-nav { flex: 1; padding: 0.65rem 0; }
+#academy-overlay .sb-section-label { font-size: 0.6rem; color: #444; letter-spacing: 2px; text-transform: uppercase; padding: 0.5rem 1.25rem; margin-top: 0.4rem; }
+#academy-overlay .sb-item { display: flex; align-items: center; gap: 0.65rem; padding: 0.6rem 1.25rem; cursor: pointer; transition: 0.15s; font-size: 0.78rem; color: #555; border-left: 3px solid transparent; }
+#academy-overlay .sb-item:hover { background: #161616; color: #e2e2e2; }
+#academy-overlay .sb-item .sb-icon { width: 26px; height: 26px; border-radius: 2px; background: #1e1e1e; display: flex; align-items: center; justify-content: center; font-size: 0.67rem; font-weight: 700; flex-shrink: 0; font-family: 'Barlow Condensed', sans-serif; color: #787878; }
+#academy-overlay .sb-item.s-completed { color: #1a9e6e; }
+#academy-overlay .sb-item.s-completed .sb-icon { background: rgba(26,158,110,0.15); color: #1a9e6e; }
+#academy-overlay .sb-item.s-failed { color: #c0392b; }
+#academy-overlay .sb-item.s-failed .sb-icon { background: rgba(192,57,43,0.12); color: #c0392b; }
+#academy-overlay .sb-item .sb-check { margin-left: auto; font-size: 0.72rem; }
+#academy-overlay .sb-item.s-completed .sb-check::after { content: '✓'; color: #1a9e6e; }
+#academy-overlay .sb-item.s-failed .sb-check::after { content: '✗'; color: #c0392b; }
+#academy-overlay .sb-footer { padding: 0.9rem 1.25rem; border-top: 1px solid #2a2a2a; }
+#academy-overlay .sb-cert-btn { width: 100%; background: rgba(200,230,0,0.07); border: 1px solid rgba(200,230,0,0.18); color: #c8e600; font-size: 0.72rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 0.55rem; cursor: pointer; transition: 0.15s; font-family: 'Inter', sans-serif; }
+#academy-overlay .sb-cert-btn:hover { background: rgba(200,230,0,0.14); }
+#academy-overlay .sb-cert-btn:disabled { opacity: 0.3; cursor: default; }
+#academy-overlay .main-content { flex: 1; overflow-y: auto; background: #080808; }
+/* Dashboard */
+#academy-overlay .dash-welcome { margin-bottom: 2rem; }
+#academy-overlay .dash-welcome h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; text-transform: uppercase; color: #fff; margin-bottom: 0.35rem; }
+#academy-overlay .dash-welcome p { color: #787878; font-size: 0.85rem; }
+#academy-overlay .dash-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-bottom: 2rem; }
+#academy-overlay .stat-card { background: #161616; border: 1px solid #2a2a2a; padding: 1.1rem; }
+#academy-overlay .stat-card .sc-label { font-size: 0.62rem; color: #555; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.4rem; }
+#academy-overlay .stat-card .sc-val { font-family: 'Barlow Condensed', sans-serif; font-size: 2.2rem; font-weight: 900; color: #c8e600; line-height: 1; }
+#academy-overlay .stat-card .sc-sub { font-size: 0.72rem; color: #555; margin-top: 0.2rem; }
+#academy-overlay .module-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 1rem; }
+#academy-overlay .module-card { background: #161616; border: 1px solid #2a2a2a; padding: 1.35rem; cursor: pointer; transition: 0.15s; position: relative; overflow: hidden; }
+#academy-overlay .module-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: #272727; transition: 0.3s; }
+#academy-overlay .module-card:hover { border-color: #363636; background: #1e1e1e; }
+#academy-overlay .module-card:hover::before { background: #c8e600; }
+#academy-overlay .module-card.s-completed::before { background: #1a9e6e; }
+#academy-overlay .module-card.s-failed::before { background: #c0392b; }
+#academy-overlay .mc-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.65rem; }
+#academy-overlay .mc-num { font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; font-weight: 900; color: #272727; line-height: 1; }
+#academy-overlay .mc-badge { font-size: 0.6rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; }
+#academy-overlay .mc-badge.s-available { background: rgba(200,230,0,0.08); color: #c8e600; border: 1px solid rgba(200,230,0,0.18); }
+#academy-overlay .mc-badge.s-completed { background: rgba(26,158,110,0.12); color: #1a9e6e; }
+#academy-overlay .mc-badge.s-failed { background: rgba(192,57,43,0.12); color: #c0392b; }
+#academy-overlay .mc-title { font-size: 0.87rem; font-weight: 700; color: #fff; margin-bottom: 0.35rem; }
+#academy-overlay .mc-desc { font-size: 0.78rem; color: #555; line-height: 1.6; margin-bottom: 0.85rem; }
+#academy-overlay .mc-meta { display: flex; gap: 1rem; }
+#academy-overlay .mc-meta span { font-size: 0.68rem; color: #444; }
+#academy-overlay .mc-score { margin-top: 0.65rem; padding-top: 0.65rem; border-top: 1px solid #2a2a2a; }
+#academy-overlay .mc-score-bar { height: 3px; background: #272727; margin-top: 0.35rem; }
+#academy-overlay .mc-score-fill { height: 100%; transition: width 0.4s; }
+/* Top bar */
+#academy-overlay .top-bar { padding: 0.85rem 1.75rem; border-bottom: 1px solid #2a2a2a; background: #0f0f0f; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+#academy-overlay .top-bar-left { display: flex; align-items: center; gap: 1.25rem; }
+#academy-overlay .back-btn { background: none; border: none; color: #555; cursor: pointer; font-size: 0.78rem; display: flex; align-items: center; gap: 0.4rem; font-family: 'Inter', sans-serif; transition: 0.15s; padding: 0; }
+#academy-overlay .back-btn:hover { color: #e2e2e2; }
+#academy-overlay .top-bar-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800; text-transform: uppercase; color: #fff; }
+#academy-overlay .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #c8e600; color: #080808; font-weight: 700; font-size: 0.82rem; padding: 10px 22px; border: none; cursor: pointer; transition: 0.15s; font-family: 'Inter', sans-serif; }
+#academy-overlay .btn-primary:hover { background: #d8f700; }
+#academy-overlay .btn-secondary { display: inline-flex; align-items: center; background: transparent; color: #e2e2e2; font-weight: 600; font-size: 0.8rem; padding: 9px 20px; border: 1px solid #363636; cursor: pointer; transition: 0.15s; font-family: 'Inter', sans-serif; }
+#academy-overlay .btn-secondary:hover { border-color: #c8e600; color: #c8e600; }
+/* Learn */
+#academy-overlay .learn-body { flex: 1; display: flex; overflow: hidden; }
+#academy-overlay .learn-toc { width: 190px; flex-shrink: 0; border-right: 1px solid #2a2a2a; padding: 0.65rem 0; overflow-y: auto; background: #0f0f0f; }
+#academy-overlay .toc-item { padding: 0.5rem 1.1rem; font-size: 0.75rem; color: #555; cursor: pointer; transition: 0.15s; border-left: 2px solid transparent; }
+#academy-overlay .toc-item:hover { color: #e2e2e2; }
+#academy-overlay .toc-item.active { color: #c8e600; border-left-color: #c8e600; }
+#academy-overlay .learn-main { flex: 1; overflow-y: auto; padding: 2.25rem 2.75rem; background: #080808; }
+#academy-overlay .learn-section { margin-bottom: 2.25rem; }
+#academy-overlay .ls-eyebrow { font-size: 0.62rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #c8e600; margin-bottom: 0.5rem; }
+#academy-overlay .ls-heading { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 800; text-transform: uppercase; color: #fff; margin-bottom: 0.85rem; }
+#academy-overlay .ls-divider { width: 28px; height: 3px; background: #c8e600; margin-bottom: 1.1rem; }
+#academy-overlay .ls-body p { color: #787878; font-size: 0.87rem; line-height: 1.8; margin-bottom: 0.8rem; }
+#academy-overlay .info-list { list-style: none; }
+#academy-overlay .info-list li { font-size: 0.82rem; color: #787878; padding: 0.28rem 0; border-bottom: 1px solid rgba(255,255,255,0.035); display: flex; gap: 0.55rem; align-items: flex-start; line-height: 1.55; }
+#academy-overlay .info-list li::before { content: '+'; color: #c8e600; font-weight: 700; flex-shrink: 0; }
+#academy-overlay .callout-box { background: rgba(200,230,0,0.05); border-left: 3px solid #c8e600; padding: 0.9rem 1.1rem; margin: 1rem 0; }
+#academy-overlay .callout-box p { color: #e2e2e2; font-size: 0.845rem; margin: 0; }
+#academy-overlay .warning-box { background: rgba(192,57,43,0.07); border-left: 3px solid #c0392b; padding: 0.9rem 1.1rem; margin: 1rem 0; }
+#academy-overlay .warning-box p { color: #e2e2e2; font-size: 0.845rem; margin: 0; }
+#academy-overlay .three-step { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; margin: 1rem 0; }
+#academy-overlay .step-item { background: #161616; border: 1px solid #2a2a2a; padding: 1.1rem; text-align: center; }
+#academy-overlay .step-item:not(:last-child) { border-right: none; }
+#academy-overlay .step-num { font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; font-weight: 900; color: #c8e600; line-height: 1; }
+#academy-overlay .step-label { font-size: 0.72rem; font-weight: 700; color: #fff; margin: 0.25rem 0 0.35rem; }
+#academy-overlay .step-desc { font-size: 0.72rem; color: #555; }
+#academy-overlay .learn-cta-bar { padding: 1.25rem 2.75rem; border-top: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: space-between; background: #0f0f0f; flex-shrink: 0; }
+#academy-overlay .learn-cta-bar p { font-size: 0.82rem; color: #555; }
+/* Assessment */
+#academy-overlay .assess-header { padding: 0.85rem 1.75rem; border-bottom: 1px solid #2a2a2a; background: #0f0f0f; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+#academy-overlay .assess-meta { display: flex; align-items: center; gap: 1.25rem; }
+#academy-overlay .assess-mod-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; color: #fff; }
+#academy-overlay .assess-counter { font-size: 0.72rem; color: #555; background: #1e1e1e; border: 1px solid #2a2a2a; padding: 4px 10px; }
+#academy-overlay .assess-progress { display: flex; align-items: center; gap: 0.65rem; font-size: 0.72rem; color: #555; }
+#academy-overlay .assess-prog-bar { width: 120px; height: 4px; background: #272727; }
+#academy-overlay .assess-prog-fill { height: 100%; background: #c8e600; transition: width 0.3s; }
+#academy-overlay .assess-body { flex: 1; overflow-y: auto; }
+#academy-overlay .assess-wrap { max-width: 720px; margin: 0 auto; padding: 2.25rem 1.75rem; }
+#academy-overlay .q-card { background: #161616; border: 1px solid #2a2a2a; padding: 1.75rem; margin-bottom: 1.25rem; }
+#academy-overlay .q-eyebrow { font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; color: #c8e600; margin-bottom: 0.65rem; }
+#academy-overlay .q-text { font-size: 1rem; color: #fff; font-weight: 600; line-height: 1.6; margin-bottom: 1.35rem; }
+#academy-overlay .q-options { display: flex; flex-direction: column; gap: 0.45rem; }
+#academy-overlay .q-opt { background: #1e1e1e; border: 1px solid #2a2a2a; color: #e2e2e2; font-size: 0.85rem; padding: 0.85rem 1.1rem; cursor: pointer; text-align: left; transition: 0.15s; display: flex; align-items: center; gap: 0.65rem; font-family: 'Inter', sans-serif; width: 100%; }
+#academy-overlay .q-opt:hover:not(:disabled) { border-color: #363636; background: #272727; }
+#academy-overlay .q-opt.correct { border-color: #1a9e6e !important; background: rgba(26,158,110,0.1) !important; color: #4ade80; }
+#academy-overlay .q-opt.wrong { border-color: #c0392b !important; background: rgba(192,57,43,0.1) !important; color: #f87171; }
+#academy-overlay .q-opt.reveal-correct { border-color: #1a9e6e !important; background: rgba(26,158,110,0.06) !important; color: #4ade80; }
+#academy-overlay .q-opt:disabled { cursor: default; }
+#academy-overlay .q-opt-letter { width: 20px; height: 20px; border-radius: 50%; border: 1px solid #363636; display: flex; align-items: center; justify-content: center; font-size: 0.62rem; font-weight: 700; flex-shrink: 0; }
+#academy-overlay .q-feedback { margin-top: 0.85rem; padding: 0.75rem 0.9rem; font-size: 0.82rem; line-height: 1.5; }
+#academy-overlay .q-feedback.correct-fb { background: rgba(26,158,110,0.09); color: #4ade80; border-left: 3px solid #1a9e6e; }
+#academy-overlay .q-feedback.wrong-fb { background: rgba(192,57,43,0.09); color: #f87171; border-left: 3px solid #c0392b; }
+#academy-overlay .q-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; }
+#academy-overlay .q-nav .ans-count { font-size: 0.72rem; color: #555; }
+#academy-overlay .btn-next { background: #c8e600; color: #080808; font-weight: 700; font-size: 0.82rem; padding: 10px 22px; border: none; cursor: pointer; font-family: 'Inter', sans-serif; transition: 0.15s; }
+#academy-overlay .btn-next:hover { background: #d8f700; }
+#academy-overlay .btn-next:disabled { opacity: 0.3; cursor: default; background: #c8e600; }
+/* Results */
+#academy-overlay .result-body { flex: 1; overflow-y: auto; }
+#academy-overlay .result-wrap { max-width: 640px; margin: 0 auto; padding: 2.75rem 1.75rem; text-align: center; }
+#academy-overlay .result-icon { font-size: 3.5rem; margin-bottom: 0.85rem; }
+#academy-overlay .result-status { font-family: 'Barlow Condensed', sans-serif; font-size: 2.8rem; font-weight: 900; text-transform: uppercase; margin-bottom: 0.4rem; }
+#academy-overlay .result-status.pass { color: #c8e600; }
+#academy-overlay .result-status.fail { color: #c0392b; }
+#academy-overlay .result-score-ring { width: 130px; height: 130px; margin: 1.25rem auto; position: relative; display: flex; align-items: center; justify-content: center; }
+#academy-overlay .result-score-ring svg { position: absolute; top: 0; left: 0; }
+#academy-overlay .ring-bg { stroke: #272727; stroke-width: 8; fill: none; }
+#academy-overlay .ring-fill { stroke-width: 8; fill: none; stroke-linecap: round; transition: stroke-dashoffset 1s ease; }
+#academy-overlay .ring-pass { stroke: #c8e600; }
+#academy-overlay .ring-fail { stroke: #c0392b; }
+#academy-overlay .ring-score { font-family: 'Barlow Condensed', sans-serif; font-size: 2.3rem; font-weight: 900; color: #fff; line-height: 1; position: relative; }
+#academy-overlay .ring-score span { font-size: 0.85rem; color: #555; }
+#academy-overlay .result-detail { background: #161616; border: 1px solid #2a2a2a; padding: 1.35rem; margin: 1.35rem 0; text-align: left; }
+#academy-overlay .result-detail h4 { font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: #c8e600; margin-bottom: 0.9rem; }
+#academy-overlay .rd-row { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid #2a2a2a; font-size: 0.82rem; }
+#academy-overlay .rd-row:last-child { border-bottom: none; }
+#academy-overlay .rd-row .label { color: #555; }
+#academy-overlay .rd-row .val { color: #fff; font-weight: 600; }
+#academy-overlay .rd-row .val.pass { color: #c8e600; }
+#academy-overlay .rd-row .val.fail { color: #c0392b; }
+#academy-overlay .callout-info { background: rgba(200,230,0,0.05); border-left: 3px solid #c8e600; padding: 0.9rem 1.1rem; margin: 1rem 0; text-align: left; }
+#academy-overlay .callout-info p { color: #e2e2e2; font-size: 0.845rem; margin: 0; }
+#academy-overlay .result-answers { margin: 1.35rem 0; text-align: left; }
+#academy-overlay .result-answers h4 { font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: #555; margin-bottom: 0.9rem; }
+#academy-overlay .ans-item { padding: 0.7rem; background: #161616; border: 1px solid #2a2a2a; margin-bottom: 0.45rem; font-size: 0.8rem; }
+#academy-overlay .ans-item .ans-q { color: #e2e2e2; font-weight: 600; margin-bottom: 0.3rem; }
+#academy-overlay .ans-item.ans-ok .ans-your { color: #4ade80; }
+#academy-overlay .ans-item.ans-ng .ans-your { color: #f87171; }
+#academy-overlay .ans-item.ans-ng .ans-correct-a { color: #4ade80; font-size: 0.76rem; }
+#academy-overlay .result-actions { display: flex; gap: 0.85rem; justify-content: center; margin-top: 1.35rem; flex-wrap: wrap; }
+/* Certificate */
+#academy-overlay .cert-body-wrap { flex: 1; overflow-y: auto; }
+#academy-overlay .cert-wrap { max-width: 680px; margin: 2.5rem auto; padding: 1.75rem; text-align: center; }
+#academy-overlay .cert-card { background: #0f0f0f; border: 2px solid #c8e600; padding: 2.75rem 2.25rem; position: relative; overflow: hidden; }
+#academy-overlay .cert-card::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; background: radial-gradient(circle,rgba(200,230,0,0.07),transparent 70%); }
+#academy-overlay .cert-logo-txt { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 900; letter-spacing: 3px; color: #fff; }
+#academy-overlay .cert-logo-txt span { color: #c8e600; }
+#academy-overlay .cert-title { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 900; text-transform: uppercase; color: #fff; margin: 1.35rem 0 0.45rem; }
+#academy-overlay .cert-modules { display: flex; flex-wrap: wrap; gap: 0.45rem; justify-content: center; margin: 1.1rem 0; }
+#academy-overlay .cert-mod-tag { background: rgba(200,230,0,0.07); border: 1px solid rgba(200,230,0,0.18); color: #c8e600; font-size: 0.67rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; }
+
+@media(max-width:860px){
+  #academy-overlay .sidebar { display: none; }
+  #academy-overlay .dash-grid { grid-template-columns: 1fr 1fr; }
+  #academy-overlay .learn-toc { display: none; }
+  #academy-overlay .learn-main { padding: 1.25rem; }
+  #academy-overlay .assess-wrap { padding: 1.25rem 0.9rem; }
+  #academy-overlay .three-step { grid-template-columns: 1fr; }
+  #academy-overlay .three-step .step-item:not(:last-child) { border-right: 1px solid #2a2a2a; border-bottom: none; }
+  .nav-academy-btn { font-size: 0.68rem; padding: 7px 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     LOGIN OVERLAY
+═══════════════════════════════════════════════════ -->
+<div id="login-overlay">
+  <div class="login-card">
+    <button class="login-close" onclick="closeLogin()">✕</button>
+    <div class="login-logo">BUILT<span>COM</span></div>
+    <div class="login-sub">Cadet Academy Portal</div>
+    <div class="login-title">Sign In</div>
+    <p class="login-desc">Access the Builtcom Cadet Program Assessment Platform. Complete all 9 modules at 80% to earn your certificate.</p>
+    <div class="login-err" id="login-err">Incorrect credentials. Please check your email and password.</div>
+    <div class="login-field">
+      <label>Email Address</label>
+      <input type="email" id="login-email" placeholder="yourname@builtcom.com.au" autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()">
+    </div>
+    <div class="login-field">
+      <label>Password</label>
+      <input type="password" id="login-pass" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()">
+    </div>
+    <button class="login-btn" onclick="doLogin()">Access Academy →</button>
+    <p class="login-note">Contact HR if you haven't received your credentials.<br>Builtcom Constructions Pty Ltd · Powered by Conquest</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     ACADEMY OVERLAY
+═══════════════════════════════════════════════════ -->
+<div id="academy-overlay">
+  <div class="acad-topbar">
+    <div class="acad-topbar-logo">BUILT<span>COM</span> <span style="font-size:.75rem;letter-spacing:1px;font-weight:600;color:#555;"> · Cadet Academy</span></div>
+    <div class="acad-topbar-right">
+      <div class="acad-user">Signed in as <strong id="acad-username">—</strong></div>
+      <button class="acad-exit-btn" onclick="exitAcademy()">✕ Exit Academy</button>
+    </div>
+  </div>
+  <div class="acad-body">
+
+    <!-- DASHBOARD -->
+    <div class="screen active" id="s-dashboard">
+      <div class="app-shell">
+        <div class="sidebar">
+          <div class="sb-header">
+            <div class="sb-logo">BUILT<span>COM</span></div>
+            <div class="sb-sub">Cadet Academy</div>
+          </div>
+          <div class="sb-progress">
+            <div class="sb-progress-label">Overall Progress <strong id="sb-pct">0%</strong></div>
+            <div class="progress-bar"><div class="progress-fill" id="sb-bar" style="width:0%"></div></div>
+          </div>
+          <div class="sb-nav" id="sb-nav"></div>
+          <div class="sb-footer">
+            <button class="sb-cert-btn" id="cert-btn" disabled onclick="APP.goTo('s-cert')">🎓 View Certificate</button>
+          </div>
+        </div>
+        <div class="main-content">
+          <div style="padding:2.25rem 2.75rem;">
+            <div class="dash-welcome">
+              <h2>Your Learning Dashboard</h2>
+              <p>Complete each module's content, then pass the assessment at <strong style="color:#c8e600">80%</strong>. Each question can only be answered once — read carefully before selecting.</p>
+            </div>
+            <div class="dash-grid">
+              <div class="stat-card"><div class="sc-label">Modules Passed</div><div class="sc-val" id="stat-done">0</div><div class="sc-sub">of 9 modules</div></div>
+              <div class="stat-card"><div class="sc-label">Average Score</div><div class="sc-val" id="stat-avg">—</div><div class="sc-sub">pass mark: 80%</div></div>
+              <div class="stat-card"><div class="sc-label">Status</div><div class="sc-val" id="stat-status" style="font-size:1rem;margin-top:.35rem;line-height:1.3">In Progress</div><div class="sc-sub" id="stat-sub">Keep going</div></div>
+            </div>
+            <div class="module-grid" id="module-grid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEARN -->
+    <div class="screen" id="s-learn">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="back-btn" onclick="APP.goTo('s-dashboard')">← Dashboard</button>
+          <div class="top-bar-title" id="learn-title"></div>
+        </div>
+        <button class="btn-primary" id="start-assess-btn" onclick="APP.startAssessment()" style="font-size:.78rem;padding:9px 20px;">Take Assessment →</button>
+      </div>
+      <div class="learn-body">
+        <div class="learn-toc" id="learn-toc"></div>
+        <div class="learn-main" id="learn-main"></div>
+      </div>
+      <div class="learn-cta-bar">
+        <p id="learn-score-note"></p>
+        <button class="btn-primary" onclick="APP.startAssessment()" style="font-size:.78rem;padding:10px 20px;">Take Assessment →</button>
+      </div>
+    </div>
+
+    <!-- ASSESSMENT -->
+    <div class="screen" id="s-assess">
+      <div class="assess-header">
+        <div class="assess-meta">
+          <button class="back-btn" onclick="if(confirm('Exit this assessment? Your current attempt will be lost.'))APP.goTo('s-dashboard')">← Exit</button>
+          <div class="assess-mod-name" id="assess-title"></div>
+          <div class="assess-counter" id="assess-counter">Q 1 / 10</div>
+        </div>
+        <div class="assess-progress">
+          <span id="assess-pct-label">0%</span>
+          <div class="assess-prog-bar"><div class="assess-prog-fill" id="assess-prog" style="width:0%"></div></div>
+        </div>
+      </div>
+      <div class="assess-body">
+        <div class="assess-wrap" id="assess-wrap"></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="screen" id="s-result">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="back-btn" onclick="APP.goTo('s-dashboard')">← Dashboard</button>
+          <div class="top-bar-title">Assessment Result</div>
+        </div>
+      </div>
+      <div class="result-body">
+        <div class="result-wrap" id="result-wrap"></div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATE -->
+    <div class="screen" id="s-cert">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="back-btn" onclick="APP.goTo('s-dashboard')">← Dashboard</button>
+          <div class="top-bar-title">Program Certificate</div>
+        </div>
+        <button class="btn-secondary" onclick="window.print()">Print Certificate</button>
+      </div>
+      <div class="cert-body-wrap">
+        <div class="cert-wrap" id="cert-wrap"></div>
+      </div>
+    </div>
+
+  </div><!-- /.acad-body -->
+</div><!-- /#academy-overlay -->
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">BUILT<span>COM</span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="#hero">Home</a>
+    <a href="#values">Values</a>
+    <a href="#about">About</a>
+    <a href="#program">Program</a>
+    <a href="#modules">Modules</a>
+    <a href="#career">Pathways</a>
+    <a href="#eligibility">Eligibility</a>
+    <a href="#stories">Stories</a>
+    <a href="#safety">Safety</a>
+  </div>
+  <button class="nav-academy-btn" onclick="openLogin()">🎓 Cadet Academy</button>
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-badge">May 2026 · Version 5.0</div>
+  <h1>Cadet<em>Program</em></h1>
+  <div class="hero-meta">
+    <div class="hero-stat"><strong>23</strong><span>Years in Industry</span></div>
+    <div class="hero-stat"><strong>35+</strong><span>Projects Delivered</span></div>
+    <div class="hero-stat"><strong>250+</strong><span>Team Members</span></div>
+  </div>
+  <a href="#program" class="hero-cta">Explore the Program →</a>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- VALUES -->
+<section id="values">
+  <div class="section-eyebrow fade-in">Our Culture</div>
+  <h2 class="section-title fade-in">What We<br>Stand For</h2>
+  <div class="divider fade-in"></div>
+  <div class="values-grid">
+    <div class="value-card fade-in">
+      <div class="value-number">01</div>
+      <h3>Own It.</h3>
+      <p>Your word is your contract. No excuses, no finger-pointing. Get it done. When something goes wrong — and it will — you solve that too.</p>
+    </div>
+    <div class="value-card fade-in">
+      <div class="value-number">02</div>
+      <h3>Build People, Not Just Buildings.</h3>
+      <p>We work hard, back each other and build careers worth having. From cadet to leader — who you become here matters.</p>
+    </div>
+    <div class="value-card fade-in">
+      <div class="value-number">03</div>
+      <h3>Say It Straight.</h3>
+      <p>Say what you mean. Mean what you say. No fluff, no softening bad news. Clarity saves time, money and relationships.</p>
+    </div>
+    <div class="value-card fade-in">
+      <div class="value-number">04</div>
+      <h3>Earn It. Every Day.</h3>
+      <p>Trust and excellence aren't assumed — they're demonstrated. Project by project, day by day. We don't coast on reputation.</p>
+    </div>
+    <div class="value-card fade-in">
+      <div class="value-number">05</div>
+      <h3>Raise the Bar.</h3>
+      <p>Good enough isn't good enough. Hold yourself and each other to a higher standard. Every day is a chance to be better than the last.</p>
+    </div>
+    <div class="value-card fade-in" style="background: rgba(198,229,10,0.05);">
+      <div class="value-number" style="color:rgba(198,229,10,0.3)">→</div>
+      <h3>Better Together</h3>
+      <p>Our developer-builder team operates like a family, fostering a culture of collaboration and support. People first, excellence, integrity, and innovation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-eyebrow fade-in">Who We Are</div>
+  <h2 class="section-title fade-in">Building a World<br>of Difference</h2>
+  <div class="divider fade-in"></div>
+  <div class="about-grid">
+    <div class="about-text fade-in">
+      <p>Builtcom continues the positive legacy Conquest has shaped over two decades as one of Australia's most trusted developer-builders. While Conquest moves forward as a private equity real estate firm, the construction expertise that defined its reputation for delivery, innovation and excellence lives on through Builtcom.</p>
+      <p>Since 2003, we've built and developed diverse projects across every sector — Major Projects, New Build, Refurbishment and Live Environments, Industrial, Regional, and Property.</p>
+      <div class="about-missions">
+        <div class="mission-block">
+          <h4>Our Mission</h4>
+          <p>We put people first. We build safely. We design with quality and care. Every project enriches lives, uplifts communities, and stands the test of time.</p>
+        </div>
+        <div class="mission-block">
+          <h4>Our Vision</h4>
+          <p>To be Sydney's most trusted construction partner. We shape safe, sustainable, and well-crafted spaces that uplift communities and leave a positive legacy for generations to come.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fade-in">
+      <p class="section-eyebrow">Our Structure</p>
+      <div class="structure-list">
+        <div class="structure-item">
+          <div class="struct-num">1</div>
+          <div class="struct-body"><h5>Development</h5><span>Strategy & Investment</span></div>
+        </div>
+        <div class="structure-item">
+          <div class="struct-num">2</div>
+          <div class="struct-body"><h5>Design</h5><span>CQ Studio, Architecture</span></div>
+        </div>
+        <div class="structure-item">
+          <div class="struct-num">3</div>
+          <div class="struct-body"><h5>Construction</h5><span>Project Delivery · Site Delivery · Central Procurement</span></div>
+        </div>
+        <div class="structure-item">
+          <div class="struct-num">4</div>
+          <div class="struct-body"><h5>Post-Completion</h5><span>Aftercare & Maintenance</span></div>
+        </div>
+        <div class="structure-item">
+          <div class="struct-num">5</div>
+          <div class="struct-body"><h5>Real Estate</h5><span>Finance · HR · Legal · Marketing</span></div>
+        </div>
+        <div class="structure-item">
+          <div class="struct-num">6</div>
+          <div class="struct-body"><h5>Fund Management</h5><span>Capital & Funds Management</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="section-eyebrow fade-in">The Cadet Program</div>
+  <h2 class="section-title fade-in">How the Program<br>Works</h2>
+  <div class="divider fade-in"></div>
+  <div class="program-intro fade-in">
+    <p>The Builtcom Cadet Program combines formal education with structured hands-on learning in the workplace. Unlike most programs, we won't box you into set rotations across every division. While the program runs for six months, your time here should feel meaningful — not just ticked off a checklist.</p>
+    <p>If you find your passion in one area, we'll encourage you to go deep. Every six months, you'll sit down with your manager for a dedicated review — a chance to celebrate milestones and map out your goals ahead.</p>
+  </div>
+  <div class="rotation-grid fade-in">
+    <div class="rotation-card">
+      <h4>Central Procurement</h4>
+      <ul>
+        <li>Estimating</li>
+        <li>Tender Evaluation</li>
+        <li>Cost Comparison</li>
+        <li>Purchasing</li>
+      </ul>
+    </div>
+    <div class="rotation-card">
+      <h4>Onsite</h4>
+      <ul>
+        <li>WHS</li>
+        <li>Project Control</li>
+        <li>Programming</li>
+        <li>Authorities</li>
+      </ul>
+    </div>
+    <div class="rotation-card">
+      <h4>Design</h4>
+      <ul>
+        <li>Quality Assurance</li>
+        <li>Value Engineering</li>
+        <li>Safety in Design</li>
+        <li>Shop Drawings</li>
+      </ul>
+    </div>
+    <div class="rotation-card">
+      <h4>Administration</h4>
+      <ul>
+        <li>Contract Administration</li>
+        <li>Variations</li>
+        <li>Forecasting</li>
+        <li>Reporting</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout fade-in">
+    <p>You'll gain exposure to software including <strong>Plexa</strong>, <strong>Bluebeam</strong>, and <strong>DocuSign</strong> — equipping you with skills that enhance your value across the construction industry.</p>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section id="modules">
+  <div class="section-eyebrow fade-in">Core Competencies</div>
+  <h2 class="section-title fade-in">Training Modules</h2>
+  <div class="divider fade-in"></div>
+  <p style="color:var(--muted);font-size:0.9rem;margin-bottom:2rem;" class="fade-in">A minimum competency of <strong style="color:var(--lime)">80%</strong> is required for each module. Access the full interactive assessments via the <strong>Cadet Academy</strong> portal.</p>
+  <div class="rotation-grid fade-in" style="grid-template-columns:repeat(3,1fr);">
+    <div class="rotation-card"><h4>01 · Project Administration</h4><ul><li>ATL & procurement process</li><li>Contract execution</li><li>Three-way invoice match</li><li>Builtcom software systems</li></ul></div>
+    <div class="rotation-card"><h4>02 · Site Management</h4><ul><li>Site establishment & setup</li><li>WHS Act obligations</li><li>Trade coordination</li><li>Quality management</li></ul></div>
+    <div class="rotation-card"><h4>03 · Delivery Dockets</h4><ul><li>Three-way match process</li><li>Verifying deliveries</li><li>Plexa upload procedure</li><li>Payment authorisation</li></ul></div>
+    <div class="rotation-card"><h4>04 · Site Logistics</h4><ul><li>Delivery coordination</li><li>Material storage</li><li>Crane safety & licensing</li><li>Congestion prevention</li></ul></div>
+    <div class="rotation-card"><h4>05 · Site Diaries</h4><ul><li>Legal document requirements</li><li>Daily required entries</li><li>EOT claim support</li><li>Plexa diary system</li></ul></div>
+    <div class="rotation-card"><h4>06 · Inspection Test Plans</h4><ul><li>Hold vs Witness Points</li><li>Reinforcement Hold Points</li><li>Waterproofing inspections</li><li>ITP audit trail in Plexa</li></ul></div>
+    <div class="rotation-card"><h4>07 · Turnstiles & Access</h4><ul><li>Induction requirements</li><li>Credential management</li><li>WHS access obligations</li><li>Cadet responsibilities</li></ul></div>
+    <div class="rotation-card"><h4>08 · Workforce Attendance</h4><ul><li>Man count methods</li><li>Productivity analysis</li><li>Under-resourcing signals</li><li>Cost control via data</li></ul></div>
+    <div class="rotation-card"><h4>09 · FRP & Construction</h4><ul><li>Formwork-Reo-Pour cycle</li><li>Concrete mix design</li><li>Plan reading fundamentals</li><li>Finishes & trade sequencing</li></ul></div>
+  </div>
+  <div class="callout fade-in" style="margin-top:2rem;text-align:center">
+    <p>Ready to begin? <button onclick="openLogin()" style="background:var(--lime);color:var(--black);border:none;padding:8px 20px;font-weight:700;cursor:pointer;font-family:inherit;font-size:0.9rem;margin-left:0.5rem">Access Cadet Academy →</button></p>
+  </div>
+<section id="career">
+  <div class="section-eyebrow fade-in">Career Pathways</div>
+  <h2 class="section-title fade-in">Builtcom Career<br>Progression</h2>
+  <div class="divider fade-in"></div>
+  <p style="color:var(--muted);font-size:0.9rem;margin-bottom:2rem;" class="fade-in">From Construction Cadet to Commercial Manager — a clear roadmap built on experience and achievement. Scroll right to see the full pathway.</p>
+  <div class="pathway-wrapper fade-in">
+    <div class="pathway-levels">
+      <div class="level-col">
+        <div class="level-header">
+          <span class="level-label">Level 1</span>
+          <span class="level-exp">Studying / Graduating</span>
+        </div>
+        <div class="role-cards">
+          <div class="role-card highlight">Construction Cadet</div>
+        </div>
+      </div>
+      <div class="level-col">
+        <div class="level-header">
+          <span class="level-label">Level 2</span>
+          <span class="level-exp">1–2 yrs · 1–2 projects</span>
+        </div>
+        <div class="role-cards">
+          <div class="role-card">Project Coordinator</div>
+          <div class="role-card">Site Engineer</div>
+          <div class="role-card">Leading Hand</div>
+          <div class="role-card">Asst Design Coordinator</div>
+        </div>
+      </div>
+      <div class="level-col">
+        <div class="level-header">
+          <span class="level-label">Level 3</span>
+          <span class="level-exp">1–2 yrs · 3–4 projects</span>
+        </div>
+        <div class="role-cards">
+          <div class="role-card">Contracts Administrator</div>
+          <div class="role-card">Sub Foreman</div>
+          <div class="role-card">Design Coordinator</div>
+        </div>
+      </div>
+      <div class="level-col">
+        <div class="level-header">
+          <span class="level-label">Level 4</span>
+          <span class="level-exp">1–2 yrs · 5–6 projects</span>
+        </div>
+        <div class="role-cards">
+          <div class="role-card">Project Engineer</div>
+          <div class="role-card">Foreman</div>
+        </div>
+      </div>
+      <div class="level-col">
+        <div class="level-header">
+          <span class="level-label">Level 5</span>
+          <span class="level-exp">1–3 yrs · 8–10 projects</span>
+        </div>
+        <div class="role-cards">
+          <div class="role-card">Senior CA</div>
+          <div class="role-card">Senior Project Engineer</div>
+          <div class="role-card">General Foreman</div>
+          <div class="role-card">Design Manager</div>
+        </div>
+      </div>
+      <div class="level-col">
+        <div class="level-header">
+          <span class="level-label">Level 6</span>
+          <span class="level-exp">3–5 yrs · 12–15 projects</span>
+        </div>
+        <div class="role-cards">
+          <div class="role-card">Contracts Manager</div>
+          <div class="role-card">Project Manager</div>
+          <div class="role-card">Site Manager</div>
+          <div class="role-card">Senior Design Manager</div>
+        </div>
+      </div>
+      <div class="level-col">
+        <div class="level-header">
+          <span class="level-label">Level 7</span>
+          <span class="level-exp">3–5 yrs · 18–20 projects</span>
+        </div>
+        <div class="role-cards">
+          <div class="role-card">Senior Site Manager</div>
+        </div>
+      </div>
+      <div class="level-col">
+        <div class="level-header">
+          <span class="level-label">Level 8</span>
+          <span class="level-exp">3–5 yrs · 24–30 projects</span>
+        </div>
+        <div class="role-cards">
+          <div class="role-card" style="border-color:var(--lime);color:var(--lime)">Commercial Manager</div>
+          <div class="role-card" style="border-color:var(--lime);color:var(--lime)">Construction Manager</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ELIGIBILITY -->
+<section id="eligibility">
+  <div class="section-eyebrow fade-in">Eligibility</div>
+  <h2 class="section-title fade-in">Academic Enrollment<br>& Requirements</h2>
+  <div class="divider fade-in"></div>
+  <div class="elig-grid">
+    <div class="elig-block fade-in">
+      <p>During your time in the program, you are expected to be enrolled in, or have completed, approved formal building-related studies.</p>
+      <p>At the start of each semester, you'll need to provide a copy of your University timetable to both your immediate supervisor and HR for approval.</p>
+      <p>In most cases, cadets will be automatically approved to attend university for <strong style="color:var(--lime)">one day per week</strong>. If you require more than one day off, special consideration is needed.</p>
+      <div class="callout">
+        <p>The company may offer <strong>special leave with full pay</strong> for studying and attending exams.</p>
+      </div>
+    </div>
+    <div class="elig-block fade-in">
+      <p>During semester breaks, you are expected to attend work on days that would normally be university days.</p>
+      <p>At the end of each semester, you'll be asked to send your university results to HR. Results remain confidential between your supervisor, senior management, and HR.</p>
+      <div class="callout">
+        <p>On your <strong>Graduation Day</strong>, you will be given a day off to attend the ceremony — provided you have completed a minimum of <strong>12 months of continuous service</strong>.</p>
+      </div>
+      <p>Builtcom understands that balancing work and study can be challenging. If you ever find it difficult to manage your responsibilities, reach out for support before it becomes a bigger issue.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
+<section id="stories">
+  <div class="section-eyebrow fade-in">People Build Businesses</div>
+  <h2 class="section-title fade-in">From Cadet<br>to Career</h2>
+  <div class="divider fade-in"></div>
+  <div class="stories-grid">
+    <div class="story-card fade-in">
+      <div class="story-header">
+        <div class="story-avatar">R</div>
+        <div class="story-meta">
+          <h4>Rebecca</h4>
+          <span>2025 Cadet</span>
+          <div class="story-role">QAT Cadet</div>
+        </div>
+      </div>
+      <p>Builtcom is a great company to work for. The company's focus on growth and development ensures that employees can gain valuable hands-on experience, which allows them to expand their knowledge and expertise at an accelerated pace.</p>
+    </div>
+    <div class="story-card fade-in">
+      <div class="story-header">
+        <div class="story-avatar">M</div>
+        <div class="story-meta">
+          <h4>Matthew</h4>
+          <span>2023 Cadet</span>
+          <div class="story-role">Leading Hand</div>
+        </div>
+      </div>
+      <p>I commenced my career with Builtcom in 2023 and have since gained valuable experience across contracts administration, QAT (SE), and site delivery. Working at Builtcom has provided a fast-paced and supportive environment that has significantly contributed to my professional growth.</p>
+    </div>
+    <div class="story-card fade-in">
+      <div class="story-header">
+        <div class="story-avatar">C</div>
+        <div class="story-meta">
+          <h4>Casper</h4>
+          <span>2025 Cadet</span>
+          <div class="story-role">Project Coordinator</div>
+        </div>
+      </div>
+      <p>You are provided with a great opportunity to dive right in and gain real world experience from day one. You are trusted with real responsibilities and encouraged to step up, often being thrown into the deep end, but always with the right support.</p>
+    </div>
+    <div class="story-card fade-in">
+      <div class="story-header">
+        <div class="story-avatar">J</div>
+        <div class="story-meta">
+          <h4>Joseph</h4>
+          <span>2018 Cadet</span>
+          <div class="story-role">Construction Manager</div>
+        </div>
+      </div>
+      <p>At Builtcom you work on a diverse range of exciting, challenging and high-profile projects across both commercial and residential sectors. Builtcom prides itself on being industry leaders in innovation, constantly exploring new technologies to streamline our processes.</p>
+    </div>
+    <div class="story-card fade-in">
+      <div class="story-header">
+        <div class="story-avatar">Jd</div>
+        <div class="story-meta">
+          <h4>Jayden</h4>
+          <span>2023 Cadet</span>
+          <div class="story-role">Sub-Foreman</div>
+        </div>
+      </div>
+      <p>Working at Builtcom has been a valuable experience both professionally and personally. The fast-paced environment challenged me to grow, adapt, and strengthen my understanding of project delivery, teamwork, and exceeding expectations.</p>
+    </div>
+    <div class="story-card fade-in">
+      <div class="story-header">
+        <div class="story-avatar">Je</div>
+        <div class="story-meta">
+          <h4>Jeremy</h4>
+          <span>2019 Cadet</span>
+          <div class="story-role">Operations Manager</div>
+        </div>
+      </div>
+      <p>I have been with Builtcom now for almost 7 years starting as a Cadet and now, an Operations Manager. Since day one everyone here has been so supportive. You really grow with the company. I recommend any uni student to get onboard!</p>
+    </div>
+  </div>
+</section>
+
+<!-- SAFETY -->
+<section id="safety">
+  <div class="section-eyebrow fade-in">Safety First</div>
+  <h2 class="section-title fade-in">Builtcom<br>Big 9 Checklist</h2>
+  <div class="divider fade-in"></div>
+  <p style="color:var(--muted);font-size:0.9rem;margin-bottom:2rem;" class="fade-in">Builtcom Safe is more than a slogan — it's who we are. Safety is embedded in our culture and guides everything we do.</p>
+  <div class="safety-grid">
+    <div class="safety-card fade-in">
+      <div class="safety-num">1</div>
+      <div class="safety-body">
+        <h4>Penetrations & Voids</h4>
+        <p>All penetrations and voids must be sealed, covered, or controlled to prevent falls or dropped objects.</p>
+        <ul class="safety-tips">
+          <li>Cover and seal penetrations immediately after works</li>
+          <li>Barricade if penetrations can't be closed straight away</li>
+          <li>Never remove another trade's cover without approval</li>
+        </ul>
+      </div>
+    </div>
+    <div class="safety-card fade-in">
+      <div class="safety-num">2</div>
+      <div class="safety-body">
+        <h4>Working Platforms & Scaffold</h4>
+        <p>Scaffold and working platforms must be stable, compliant, and clear of obstructions at all times.</p>
+        <ul class="safety-tips">
+          <li>Only licensed scaffolders may adjust scaffold</li>
+          <li>Keep platforms clear of rubbish, tools, or materials</li>
+          <li>Do not use scaffold tagged "incomplete" or "unsafe"</li>
+          <li>No domestic ladders allowed on site</li>
+        </ul>
+      </div>
+    </div>
+    <div class="safety-card fade-in">
+      <div class="safety-num">3</div>
+      <div class="safety-body">
+        <h4>Edge Protection & Work at Height</h4>
+        <p>Every live edge and opening must have proper fall-prevention controls in place.</p>
+        <ul class="safety-tips">
+          <li>Never remove or alter edge protection barriers</li>
+          <li>Report any missing or unsafe barriers immediately</li>
+          <li>Treat all edges as live until confirmed safe</li>
+        </ul>
+      </div>
+    </div>
+    <div class="safety-card fade-in">
+      <div class="safety-num">4</div>
+      <div class="safety-body">
+        <h4>Traffic Management</h4>
+        <p>Pedestrian and vehicle movements must always follow the approved traffic plan.</p>
+        <ul class="safety-tips">
+          <li>Use only designated walkways and access points</li>
+          <li>Follow instructions from spotters, signage, and traffic controllers</li>
+          <li>Do not adjust barriers or signage without approval</li>
+        </ul>
+      </div>
+    </div>
+    <div class="safety-card fade-in">
+      <div class="safety-num">5</div>
+      <div class="safety-body">
+        <h4>Housekeeping & Storage</h4>
+        <p>A clean, orderly site prevents accidents and improves productivity.</p>
+        <ul class="safety-tips">
+          <li>Clean up your work area daily</li>
+          <li>Keep storage zones tidy, labelled, and organised</li>
+          <li>Wear correct PPE and manage silica dust properly</li>
+        </ul>
+      </div>
+    </div>
+    <div class="safety-card fade-in">
+      <div class="safety-num">6</div>
+      <div class="safety-body">
+        <h4>Access, Egress & Exclusion Zones</h4>
+        <p>Safe entry, exit, and exclusion areas must always be maintained and respected.</p>
+        <ul class="safety-tips">
+          <li>Keep emergency exits and access routes clear</li>
+          <li>Respect fencing, hoardings, and exclusion zones at all times</li>
+          <li>Cap or remove protruding objects that could cause injury</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UNDERTAKING -->
+<section id="undertaking">
+  <div class="section-eyebrow fade-in">Undertaking</div>
+  <h2 class="section-title fade-in">Your Commitment<br>to the Program</h2>
+  <div class="divider fade-in"></div>
+  <div class="undertaking-box fade-in">
+    <h3>I understand that by joining the Builtcom Cadet Program, I am expected to demonstrate my commitment by taking responsibility for the following:</h3>
+    <ul>
+      <li>Being proactive and engaging with my Immediate Supervisor and regularly reviewing my progress through the 'core skills'.</li>
+      <li>I will undertake to demonstrate an interest and proactiveness towards my own learning.</li>
+      <li>I will attend and participate in cadet meetings as required.</li>
+      <li>I will submit my university timetable and results to the HR Manager as required.</li>
+      <li>I will ask questions and utilise the knowledge around me to develop my skills.</li>
+      <li>I will adhere to Builtcom company policies and procedures.</li>
+    </ul>
+    <div class="sig-line">
+      <div class="sig-field">
+        <label>Cadet Signature</label>
+        <div class="line"></div>
+      </div>
+      <div class="sig-field">
+        <label>HR</label>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">BUILT<span>COM</span><div style="font-size:0.65rem;letter-spacing:1px;color:var(--muted);font-family:'Inter',sans-serif;font-weight:400;margin-top:2px">powered by conquest</div></div>
+  <div class="footer-contact">
+    <p><a href="mailto:contact@builtcom.com.au">contact@builtcom.com.au</a></p>
+    <p><a href="http://www.builtcom.com.au">www.builtcom.com.au</a></p>
+    <p>02 8212 5592</p>
+    <p style="margin-top:0.5rem">Level 1, 15 George Street, Burwood NSW 2134 Australia</p>
+  </div>
+  <div class="footer-copy">May 2026 · Version 5.0 · Builtcom Constructions Pty Ltd</div>
+</footer>
+
+<script>
+  // Tabs
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // Quiz
+  function answer(btn, correct) {
+    const parent = btn.closest('.quiz-options');
+    if (parent.querySelector('.correct, .wrong')) return; // already answered
+    const opts = parent.querySelectorAll('.quiz-opt');
+    opts.forEach(o => o.disabled = true);
+    if (correct) {
+      btn.classList.add('correct');
+      const fb = document.createElement('div');
+      fb.className = 'quiz-feedback ok'; fb.textContent = '✓ Correct!';
+      parent.after(fb);
+    } else {
+      btn.classList.add('wrong');
+      const fb = document.createElement('div');
+      fb.className = 'quiz-feedback no'; fb.textContent = '✗ Not quite — try reviewing the module.';
+      parent.after(fb);
+    }
+  }
+
+  // Nav hamburger
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // Scroll highlight nav
+  const sections = document.querySelectorAll('section[id]');
+  const navAs = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) cur = s.id;
+    });
+    navAs.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+    });
+  });
+
+  // Fade in on scroll
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => obs.observe(el));
+
+</script>
+<script>
+
+/* LOGIN SYSTEM */
+const USERS=[
+  {email:'cadet@builtcom.com.au',pass:'builtcom2026',name:'Builtcom Cadet'},
+  {email:'admin@builtcom.com.au',pass:'admin2026',name:'HR Admin'},
+  {email:'demo@builtcom.com.au',pass:'demo',name:'Demo User'}
+];
+let currentUser=null;
+
+function openLogin(){
+  document.getElementById('login-overlay').classList.add('visible');
+  setTimeout(()=>document.getElementById('login-email').focus(),100);
+}
+function closeLogin(){
+  document.getElementById('login-overlay').classList.remove('visible');
+  document.getElementById('login-err').classList.remove('show');
+}
+function doLogin(){
+  const email=document.getElementById('login-email').value.trim().toLowerCase();
+  const pass=document.getElementById('login-pass').value;
+  const user=USERS.find(u=>u.email===email&&u.pass===pass);
+  if(user){
+    currentUser=user;
+    closeLogin();
+    document.getElementById('acad-username').textContent=user.name;
+    document.getElementById('academy-overlay').classList.add('visible');
+    document.body.style.overflow='hidden';
+    APP.goTo('s-dashboard');
+  } else {
+    document.getElementById('login-err').classList.add('show');
+    document.getElementById('login-pass').value='';
+    document.getElementById('login-pass').focus();
+  }
+}
+function exitAcademy(){
+  if(!confirm('Exit the Academy? Your progress is saved for this session.'))return;
+  document.getElementById('academy-overlay').classList.remove('visible');
+  document.body.style.overflow='';
+}
+
+
+const MODULES=[
+{id:'project-admin',num:'01',title:'Project Administration',desc:'The administrative and contractual backbone — ATL, contracts, invoicing, and Builtcom systems.',duration:'30 min',questions:10,
+content:[{ey:'Overview',h:'Project Administration',body:'Forms the contractual and operational backbone of every project — covering ATL, contracts, invoicing, and Builtcom systems.'},
+{ey:'Key Process',h:'The ATL Process',body:'ATL (Authorisation to Let) is required before any subcontract is executed. All submissions go through Plexa and are reviewed by the CA.'},
+{ey:'Financial Control',h:'Three-Way Invoice Match',body:'No payment without: Purchase Order + Delivery Docket + Supplier Invoice. All three must match exactly.'},
+{ey:'Systems',h:'Builtcom Platforms',body:'Plexa (docs/diaries/ITPs), Bluebeam (PDFs), DocuSign (e-signing), MS Project/P6 (scheduling).'}],
+quiz:[
+{q:'What does ATL stand for in the Builtcom procurement process?',o:['Authority to Launch','Authorisation to Let','Approval to Ledger','Administration Timeline'],a:1,e:'ATL stands for Authorisation to Let — the internal approval process that must be completed before any subcontract is executed.'},
+{q:'What is a LOPT and when is it issued?',o:['Labour Output Performance Tracking — issued weekly','Letter of Permission to Trade — issued to a subcontractor after ATL approval','Logistics and Operations Planning Template — issued at project start','List of Project Tasks — issued at the start of each month'],a:1,e:'LOPT = Letter of Permission to Trade. It is issued to a subcontractor following a successful ATL approval, formally authorising them to begin works.'},
+{q:'Which system is used to store all project documentation at Builtcom?',o:['Microsoft SharePoint','Google Drive','Plexa','Bluebeam'],a:2,e:'Plexa is Builtcom\'s primary project management and documentation system. All project documents, diaries, ITPs, and financial records are stored here.'},
+{q:'What three documents form the three-way invoice verification process?',o:['Quote, Docket, Invoice','Purchase Order, Delivery Docket, Supplier Invoice','Contract, Receipt, Payment Advice','ATL, LOPT, Tax Invoice'],a:1,e:'The three-way match: Purchase Order (ordered), Delivery Docket (delivered), Supplier Invoice (billed). All three must match before payment.'},
+{q:'An invoice arrives without a signed delivery docket. What happens?',o:['Approved with a 5-day grace period','Held pending the subcontractor\'s explanation','Rejected — payment withheld until docket is provided','Escalated to the CFO immediately'],a:2,e:'No Docket + No PO = Invoice NOT Payable. The financial control rule is firm — no exceptions.'},
+{q:'Which software is used for PDF markup and drawing management at Builtcom?',o:['DocuSign','Bluebeam','Plexa','Primavera'],a:1,e:'Bluebeam is used for PDF markup, drawing annotation, and document management on Builtcom projects.'},
+{q:'What must be completed before a subcontract can be formally executed at Builtcom?',o:['Three quotes submitted by the subcontractor','Sign-off from the client','A completed ATL submission and approval','Verbal agreement from the site manager'],a:2,e:'An ATL (Authorisation to Let) must be completed and formally approved before any subcontract is executed.'},
+{q:'What is used for electronic signing of contracts at Builtcom?',o:['Adobe Acrobat','Bluebeam','DocuSign','Wet signature only'],a:2,e:'DocuSign is used for electronic signing of contracts and formal documents at Builtcom.'},
+{q:'How are scope changes to a subcontract managed at Builtcom?',o:['Verbal agreement on site','By re-issuing the original subcontract','Through formal Variation Orders (VOs) documented in Plexa','By email with the subcontractor only'],a:2,e:'All scope changes are managed through formal Variation Orders (VOs), documented and stored in Plexa. Verbal agreements are not valid.'},
+{q:'What does the Contracts Administrator review before a subcontract is executed?',o:['The site diary entries for that trade','The subcontract for correct scope, price, and documentation completeness','The delivery dockets for that subcontractor','The man count attendance records'],a:1,e:'The CA reviews the subcontract to verify scope, pricing, and documentation are all correct and complete before execution.'}
+]},
+
+{id:'site-management',num:'02',title:'Site Management',desc:'How a construction site is controlled, monitored, and operated safely under NSW regulations.',duration:'35 min',questions:10,
+content:[{ey:'Overview',h:'Site Management',body:'Day-to-day control of safety, quality, program, cost, and subcontractor coordination on a live construction site.'},
+{ey:'WHS',h:'Safety Obligations',body:'SWMS required for all high-risk work. Site induction mandatory for all workers. All incidents recorded in Plexa.'},
+{ey:'Operations',h:'Daily Coordination',body:'Trade meetings, delivery bookings, ITP management, crane scheduling, RFI and drawing control.'},
+{ey:'Quality',h:'Non-Conformance',body:'Any work deviating from approved drawings/specs is a non-conformance. Document in Plexa and escalate immediately.'}],
+quiz:[
+{q:'What is the primary purpose of site management?',o:['Speed up works above all else','Approve subcontractor design documentation','Ensure safety, compliance, coordination, and program control','Manage project invoices and payment'],a:2,e:'Site management ensures works are delivered safely, in compliance with all regulations, within program, and with proper coordination of trades and logistics.'},
+{q:'Which document governs minimum building compliance standards in Australia?',o:['WHS Act (NSW)','NCC — National Construction Code','ISO 9001 Quality Standard','Local Council Development Controls'],a:1,e:'The NCC (National Construction Code), also known as the Building Code of Australia (BCA), sets minimum building compliance standards across Australia.'},
+{q:'What does SWMS stand for and when is it required?',o:['Site Welfare Management System — required monthly','Safe Work Method Statement — required for all high-risk construction work','Subcontractor Works Monitoring Schedule — required at tender','Site Waste Management Strategy — required for all demolition works'],a:1,e:'SWMS = Safe Work Method Statement. It is mandatory for all high-risk construction work as defined by the WHS Regulations.'},
+{q:'Who typically supervises daily trade activities on a Builtcom construction site?',o:['The architect','The client\'s representative','Site Manager or Foreman','Project Administrator'],a:2,e:'The Site Manager or Foreman is responsible for supervising daily trade activities and ensuring safe, compliant work practices on site.'},
+{q:'What software is typically used for construction program scheduling at Builtcom?',o:['Microsoft Excel and email','MS Project or Primavera P6','Plexa only','Bluebeam'],a:1,e:'MS Project and Primavera P6 are the standard construction programming tools used at Builtcom.'},
+{q:'What are "critical path activities" in a construction program?',o:['Activities that cost the most money','Activities where any delay directly delays the overall project completion date','The most complex technical activities','Activities completed in the first two weeks'],a:1,e:'Critical path activities have zero float — any delay to them directly delays the project completion date.'},
+{q:'What must be displayed at all Builtcom construction site entries?',o:['A list of all subcontractors and their values','Emergency evacuation plans and mandatory safety signage','The full construction program','The project contract price'],a:1,e:'Emergency evacuation plans and mandatory safety signage must be clearly posted at all site entry points.'},
+{q:'What is a Construction Certificate (CC)?',o:['A certificate confirming concrete quality','The authority approval permitting physical construction to commence','A cadet competency certificate','A council planning permit for design changes'],a:1,e:'A Construction Certificate (CC) is the authority approval that permits physical construction to commence on site.'},
+{q:'What must happen immediately when a program delay is identified?',o:['Wait until the end of the month to report it','Ignore it if it is under one week','Issue an early warning to the project team so action can be taken','Ask the subcontractor to fix it without telling the project manager'],a:2,e:'Program risks must be communicated immediately through an early warning so the team can take action before a delay becomes critical.'},
+{q:'What is the minimum PPE required on all Builtcom construction sites?',o:['Hard hat only','Sunglasses and steel-capped boots','Hi-vis vest, hard hat, safety boots, and safety glasses','Hi-vis vest and any closed-toe shoes'],a:2,e:'Minimum mandatory PPE on a Builtcom site: hi-vis vest, hard hat, safety boots, and safety glasses — always, without exception.'}
+]},
+
+{id:'dockets',num:'03',title:'Delivery Dockets',desc:'Why delivery dockets are critical for cost control, payment approval, and audit compliance.',duration:'20 min',questions:10,
+content:[{ey:'Definition',h:'Delivery Dockets',body:'Proof that materials were delivered to site. Must be signed by an authorised Builtcom person at time of delivery.'},
+{ey:'Process',h:'Verification Checklist',body:'Check: quantity, description, condition, specification, and correct site — before signing.'},
+{ey:'Rule',h:'No Docket = No Payment',body:'An invoice without a matching signed docket is rejected. No exceptions. Upload to Plexa same day.'},
+{ey:'System',h:'Recording in Plexa',body:'Photograph signed docket immediately. Upload to the correct Purchase Order in Plexa the same day.'}],
+quiz:[
+{q:'What is the primary purpose of a delivery docket?',o:['To record truck arrival and departure times','To prove that materials or services were delivered to site','To automatically approve supplier invoices','To record supplier contact details and ABN'],a:1,e:'A delivery docket is proof of delivery — it legally documents that specific materials were received at site.'},
+{q:'What are the three documents in the three-way verification process?',o:['Quote, Docket, Invoice','Purchase Order, Delivery Docket, Supplier Invoice','Contract, Receipt, Payment Advice','ATL, LOPT, Tax Invoice'],a:1,e:'Purchase Order (ordered), Delivery Docket (delivered), Supplier Invoice (billed) — all three must match before payment.'},
+{q:'Why must delivery dockets be signed by authorised site personnel?',o:['For the supplier\'s internal records only','To create a legal record verifying materials were received at site','It is recommended but optional','For tax filing purposes only'],a:1,e:'Your signature is a legal declaration that materials were received. It is required before any invoice can be approved for payment.'},
+{q:'What happens if an invoice arrives without a signed delivery docket?',o:['Approved with a 5-day grace period','Held and chased within 48 hours','Invoice rejected — payment withheld until docket is provided','Escalated to the client'],a:2,e:'No Docket = Invoice NOT Payable. The invoice is rejected and payment withheld until supporting documentation is provided.'},
+{q:'A delivery arrives with 20% less material than the purchase order specifies. What do you do?',o:['Sign the docket for the full PO quantity so the truck can leave','Refuse the delivery entirely and send it back','Sign for the actual quantity received, note the shortfall, and notify procurement','Sign the docket and wait to see if the rest arrives next week'],a:2,e:'Always sign for the actual quantity received. Note the discrepancy on the docket and immediately notify the procurement team.'},
+{q:'When must a signed docket be uploaded to Plexa?',o:['At the end of the project','In weekly batches','Monthly during progress claim preparation','Immediately after signing — same day'],a:3,e:'Dockets must be uploaded to Plexa immediately to maintain accurate financial records and audit compliance.'},
+{q:'Which of the following information is NOT required on a valid delivery docket?',o:['Supplier name and ABN','Quantity of materials delivered','The delivering driver\'s licence number','PO number reference'],a:2,e:'The driver\'s licence number is not required on a delivery docket. Required fields include supplier, date, materials, quantity, PO number, and signature.'},
+{q:'What is the purpose of linking a delivery docket to a purchase order?',o:['To track supplier vehicle registration','To verify materials delivered match what was ordered and approved','To speed up future deliveries from the same supplier','To enable the site diary to auto-populate'],a:1,e:'Linking docket to PO verifies that what was received matches what was ordered and approved — preventing unauthorised or incorrect materials being accepted and charged.'},
+{q:'Where must delivery dockets be stored for audit compliance at Builtcom?',o:['In the site manager\'s email inbox','In a physical folder at the site office','In Plexa — linked to the relevant project','On the cadet\'s personal computer'],a:2,e:'Delivery dockets must be stored in Plexa to ensure accurate financial tracking and compliance with audit requirements.'},
+{q:'What should you check FIRST when materials arrive on site?',o:['The supplier\'s logo and packaging colour','Quantity and type of materials match the purchase order','The delivery truck registration number','The driver\'s name and contact details'],a:1,e:'Always verify that the materials and quantities delivered match the purchase order before signing anything.'}
+]},
+
+{id:'logistics',num:'04',title:'Site Logistics',desc:'Managing the safe and efficient movement of materials, equipment, and workers across a live construction site.',duration:'25 min',questions:10,
+content:[{ey:'Overview',h:'Site Logistics',body:'Planning and management of how materials, plant, and personnel move through the site.'},
+{ey:'Deliveries',h:'Booking System',body:'All deliveries pre-booked. Confirm access routes, vehicle types, and unloading zones in advance.'},
+{ey:'Cranes',h:'Crane Safety',body:'Only licensed riggers/dogmen attach loads. Exclusion zone mandatory. Wind speed checked before every lift.'},
+{ey:'Storage',h:'Material Storage',body:'Heavy materials at ground level. Steel blocked to prevent rolling. FIFO — oldest materials used first.'}],
+quiz:[
+{q:'What does construction logistics primarily manage?',o:['Contract administration and invoicing','Safe and efficient movement of materials, equipment, and workers on site','Staff payroll and HR management','Design and architectural coordination'],a:1,e:'Logistics manages all movement on site: deliveries, crane lifts, traffic, pedestrian access, storage, and waste.'},
+{q:'Which is an example of a logistics failure on site?',o:['A crane lift with a fully cleared exclusion zone','Congested site access blocking multiple delivery vehicles','A confirmed delivery booking with a designated unloading area','Clearly marked and separated pedestrian walkways'],a:1,e:'Congested site access is a classic logistics failure — it prevents deliveries, creates safety risks, and disrupts the program.'},
+{q:'What is "double handling" of materials and why is it a problem?',o:['Ordering double the materials needed — it wastes money','Moving materials more than once on site — it wastes time, labour, and increases damage risk','Signing two delivery dockets for the same delivery — it creates audit issues','Ordering from two suppliers — it complicates the three-way match'],a:1,e:'Double handling means materials are moved more than once. It wastes time, increases labour costs, and raises the risk of material damage.'},
+{q:'What must be established BEFORE any crane lift commences on site?',o:['A morning team briefing in the lunchroom','An exclusion zone with all personnel cleared from underneath the lift path','A signed delivery docket for the lifted item','A site diary entry confirming the lift is planned'],a:1,e:'A crane exclusion zone must be established and all personnel cleared from the area before any lift commences — no exceptions.'},
+{q:'Who must you notify if you identify an unsafe or congested access route on site?',o:['The architect','The client\'s representative','The Site Manager — immediately','The delivery driver'],a:2,e:'Access route hazards and congestion must be reported to the Site Manager immediately for corrective action.'},
+{q:'What licence is required to attach a load to a crane hook on a construction site?',o:['A White Card (general induction)','Site induction card and supervisor approval','Rigger and Dogman licence — issued by a registered training organisation','Construction supervisor certificate'],a:2,e:'Only licensed riggers and dogmen may attach loads to a crane hook. This is a statutory WHS requirement — no exceptions.'},
+{q:'What is a delivery booking system used for?',o:['Giving preferred suppliers priority access','Coordinating delivery timing to prevent site congestion and clashes','Automatically generating delivery dockets and POs','Tracking subcontractor payroll and attendance'],a:1,e:'Delivery booking systems coordinate delivery times so multiple deliveries don\'t clash, preventing congestion and site disruption.'},
+{q:'What must be checked about wind conditions before a crane lift commences?',o:['Nothing — the crane operator decides on site','Wind speed must be within the crane\'s maximum rated operating limit','Only the direction of wind matters, not speed','Wind is only relevant for lifts above 10 storeys'],a:1,e:'Wind speed must be checked against the crane\'s operating limit. Lifts must not proceed if wind speed exceeds the manufacturer\'s rated limit.'},
+{q:'Why must pedestrian routes be completely separated from vehicle and plant movements?',o:['To comply with council noise rules','To prevent the risk of pedestrian fatalities from vehicle strikes — a leading cause of site fatalities','To ensure deliveries happen faster','To comply with insurance requirements only'],a:1,e:'Pedestrian/vehicle separation is a critical safety control. Vehicle strikes on pedestrians are among the most serious and fatal construction site incidents.'},
+{q:'Poor logistics planning directly leads to which outcomes?',o:['Lower project costs and improved programme outcomes','Delays, safety incidents, congestion, and program and cost overruns','Better subcontractor relationships','Reduced inspection frequency and faster handover'],a:1,e:'Poor logistics leads to delays, safety incidents, congestion, program disruption, and cost overruns — all preventable with proper advance planning.'}
+]},
+
+{id:'site-diaries',num:'05',title:'Site Diaries',desc:'The legal and operational record of daily construction activities — completed daily in Plexa.',duration:'20 min',questions:10,
+content:[{ey:'Definition',h:'Site Diary',body:'Legal and operational record of daily site activity. Completed daily in Plexa. Cannot be edited after submission.'},
+{ey:'Required',h:'What to Record',body:'Weather, man count by trade, deliveries, plant on site, delays, incidents, inspections, and all visitors.'},
+{ey:'Legal',h:'Why It Matters',body:'Primary evidence in disputes. Basis for EOT claims. WHS compliance record. Insurance claim support.'},
+{ey:'System',h:'Completing in Plexa',body:'Log in each morning. Factual entries only — no opinions. Attach photos. Submit before leaving site.'}],
+quiz:[
+{q:'What is the primary function of a site diary on a construction project?',o:['Personal daily journal for the site manager','Legal and operational record of daily site activities','HR payroll and attendance tracking tool only','Marketing and project photography log'],a:1,e:'A site diary is a legal and operational record — it can be used in court disputes, delay claims, and insurance cases.'},
+{q:'How often must a site diary be completed at Builtcom?',o:['Weekly — every Monday','Monthly, or when something significant occurs','Daily — for every working day without exception','Only when delays or incidents occur'],a:2,e:'Site diaries must be completed every single working day without exception — it is a legal and operational requirement.'},
+{q:'What system is used to record site diaries at Builtcom?',o:['Microsoft Excel spreadsheets','Email reports to head office','Plexa — Builtcom\'s project management system','Physical paper diary stored in the site office'],a:2,e:'All Builtcom site diaries are recorded digitally in Plexa — time-stamped and accessible to the full project team in real time.'},
+{q:'Can a site diary entry be edited after it has been submitted in Plexa?',o:['Yes, at any time with manager approval','Yes, within 24 hours of submission','No — submitted diaries cannot be edited. This preserves their integrity as legal records.','Yes, but only the site manager can make changes'],a:2,e:'Once submitted in Plexa, site diary entries cannot be edited. This ensures they are tamper-evident legal records.'},
+{q:'What is an EOT, and how does the site diary support it?',o:['End Of Trade — the diary records when trades finish','Extension of Time — site diary evidence of delays supports formal EOT claims','Equipment on Transfer — documented when plant moves between projects','Early Opening of Tender — the diary records pricing submissions'],a:1,e:'An Extension of Time (EOT) is a formal claim for additional program time due to delays. Site diary records of delays and their causes form the evidence base for EOT claims.'},
+{q:'Which type of language should be used in site diary entries?',o:['Detailed personal opinions and assessments of subcontractor quality','Casual, informal language for quick notes only','Factual, clear, time-stamped entries — no opinions or assumptions','Technical abbreviations understood only by the site team'],a:2,e:'Entries must be factual and clear — no opinions or assumptions. Subjective language has no place in a legal document.'},
+{q:'Why must weather conditions be recorded in the site diary every day?',o:['For the Builtcom company newsletter','To plan team social events and BBQs','To provide evidence of weather impacts on works — supporting delay and EOT claims','To satisfy insurance requirements only'],a:2,e:'Recording weather conditions enables the project team to demonstrate how weather affected works — critical for delay analysis and EOT claims.'},
+{q:'What is "man count" and why is it recorded?',o:['The total number of Builtcom employees across all projects','The number of workers present on site each day by trade — used for productivity, safety, and delay analysis','The number of cadet applications received that month','The number of project managers on the project'],a:1,e:'Man count is the daily record of workers on site by trade and subcontractor. It supports productivity tracking, labour verification, and EOT claims.'},
+{q:'What information must be recorded about site visitors in the diary?',o:['Their vehicle registration numbers','Their name, company, and purpose of visit','Their hourly rate and contract value','Their mobile number for future contact'],a:1,e:'All site visitors must be recorded: name, company, and purpose of visit. This maintains a complete record of all site activity.'},
+{q:'Who is typically responsible for completing the site diary at Builtcom?',o:['The construction cadet on rotation','Builtcom Head Office administration team','Site Manager, Foreman, or Site Engineer','The subcontractor\'s site representative'],a:2,e:'Site diaries are completed by the Site Manager, Foreman, or Site Engineer — the senior site personnel responsible for that day\'s operations.'}
+]},
+
+{id:'itps',num:'06',title:'Inspection Test Plans',desc:'Quality control documentation ensuring construction works are inspected at critical stages.',duration:'25 min',questions:10,
+content:[{ey:'Definition',h:'Inspection Test Plans',body:'Quality control document ensuring works are inspected against drawings, specs, NCC, and Australian Standards.'},
+{ey:'Types',h:'Hold vs Witness Points',body:'Hold Point: work MUST stop until signed off. Witness Point: work may proceed if inspector does not attend.'},
+{ey:'Critical',h:'Non-Conformance Risk',body:'Proceeding past a Hold Point without sign-off is a major non-conformance. Rectification is at Builtcom's cost.'},
+{ey:'Examples',h:'Common Hold Points',body:'Structural reinforcement before pour. Waterproofing before tiling. Fire penetrations. Façade elements.'}],
+quiz:[
+{q:'What does ITP stand for?',o:['Internal Testing Protocol','Inspection Test Plan','Infrastructure Task Procedure','Invoice and Tax Platform'],a:1,e:'ITP = Inspection Test Plan. A quality control document ensuring works are inspected at critical construction stages.'},
+{q:'What is the main purpose of an ITP on a Builtcom project?',o:['Track project finances and invoices','Ensure work is inspected and verified against drawings, specifications, NCC, and Australian Standards','Manage subcontractor payroll and attendance records','Approve site access credentials for trades'],a:1,e:'ITPs ensure works are formally inspected and verified at critical stages — protecting quality, compliance, and Builtcom\'s legal position.'},
+{q:'What does a Hold Point mean on an ITP?',o:['Work continues — the inspector has been notified and may attend if available','An optional quality check the team can choose to skip if on a tight programme','Work MUST stop completely until inspection is conducted and approval formally granted','A budget review to check whether inspection costs are within budget'],a:2,e:'A Hold Point means work must stop. No exceptions. Inspection approval must be formally granted before works can proceed.'},
+{q:'How does a Witness Point differ from a Hold Point?',o:['They are identical — both require work to stop until the inspector arrives','At a Witness Point, work may proceed if the nominated inspector does not attend','A Witness Point is more critical than a Hold Point','Witness Points are optional and only apply to major structural works'],a:1,e:'At a Witness Point, the inspector is notified and may attend, but work can proceed if they don\'t. A Hold Point requires the inspector\'s presence and formal approval.'},
+{q:'What happens if work proceeds past a Hold Point without formal sign-off?',o:['Nothing — it is self-certifying and acceptable under minor works','A minor administrative note is recorded in the site diary','It is a major non-conformance — work may need to be removed, re-done, and re-inspected at Builtcom\'s cost','The certifier is notified informally and the matter is resolved later'],a:2,e:'Proceeding past a Hold Point without sign-off is a serious non-conformance. Rectification can be extremely costly and time-consuming.'},
+{q:'Which of the following always requires an ITP Hold Point inspection at Builtcom?',o:['Clearing the lunchroom and disposing of waste','Structural reinforcement inspection before a concrete pour','Ordering and receiving materials from a supplier','Completing the daily site diary in Plexa'],a:1,e:'Structural reinforcement must always be inspected as a Hold Point before any concrete pour — the reinforcement cannot be verified after concrete is placed.'},
+{q:'Which system is used to manage and track ITP inspections at Builtcom?',o:['Email system and shared drives','Accounting software and spreadsheets','Plexa — Builtcom\'s project management system','WhatsApp group and photo messages'],a:2,e:'All ITP documentation, inspection records, photos, and sign-offs are managed through Plexa on Builtcom projects.'},
+{q:'What is the purpose of uploading photos to ITP inspection records in Plexa?',o:['For the Builtcom marketing team\'s portfolio','To provide visual evidence supporting the inspection record — protecting quality compliance','To satisfy the supplier\'s delivery verification requirements','To track progress for the client\'s weekly update report'],a:1,e:'Photos uploaded to ITP records provide visual evidence of compliance, protecting Builtcom in future disputes or defect claims.'},
+{q:'Which work activity requires a waterproofing Hold Point inspection?',o:['Before painting the exterior of the building','Before any tiling, screed, or topping is placed over the waterproofing membrane','Before the structural reinforcement is placed','Before the concrete pour in the basement'],a:1,e:'Waterproofing must be inspected and approved before any covering (tiles, screed, topping) is placed. Once covered, it cannot be inspected without removing the covering.'},
+{q:'What does the ITP audit trail in Plexa protect Builtcom against?',o:['Staff turnover and knowledge loss','Future defect claims, disputes, and allegations of non-compliance with specifications or the NCC','Marketing and reputational risks from project photos','Delivery scheduling errors and logistics failures'],a:1,e:'A complete Plexa ITP audit trail is evidence of quality compliance — it protects Builtcom against defect claims, disputes, and compliance allegations.'}
+]},
+
+{id:'turnstiles',num:'07',title:'Turnstiles & Site Access',desc:'Controlled access systems ensuring only authorised, inducted workers enter a construction site.',duration:'20 min',questions:10,
+content:[{ey:'Overview',h:'Turnstiles & Access',body:'Controlled access gates integrated with Plexa. Prevent uninducted workers from entering site.'},
+{ey:'Process',h:'How It Works',body:'Worker completes induction in Plexa → credentials activated → turnstile scans → timestamps recorded automatically.'},
+{ey:'Legal',h:'WHS Obligation',body:'No Induction = No Entry. Uninducted workers on site is a WHS breach and may void insurance coverage.'},
+{ey:'Role',h:'Cadet Responsibilities',body:'Monitor for bypass attempts. Confirm attendance matches diary man counts. Report faults immediately.'}],
+quiz:[
+{q:'Why are turnstiles used on Builtcom construction sites?',o:['They are a legal requirement for all buildings over 10 storeys','To control and record site access — ensuring only inducted, authorised workers can enter','To replace the need for site supervisors at entry points','To manage delivery vehicle bookings and crane scheduling'],a:1,e:'Turnstiles control and record site access, ensuring only inducted and authorised workers can physically enter the site.'},
+{q:'What must a worker complete before their turnstile credentials are activated?',o:['A payroll registration form at head office','A site induction registered and completed in Plexa','A hands-on safety audit of the full site','An equipment competency verification test'],a:1,e:'Every worker must complete a Plexa-registered site induction before their credentials are activated and they can access the site.'},
+{q:'What happens when a turnstile scans expired credentials?',o:['The worker is granted entry with a supervisor\'s manual override','A warning email is sent to HR while access is still granted','Entry is denied — the worker must renew their induction to regain access','The turnstile opens but logs a non-compliance flag'],a:2,e:'Expired credentials result in denied entry. The worker must renew their induction in Plexa to have access reinstated.'},
+{q:'Why is an accurate headcount critical during a site emergency evacuation?',o:['For insurance premium calculation purposes','To ensure every person on site is accounted for — no worker left unaccounted in a dangerous area','For productivity analysis following the emergency','To satisfy the daily site diary requirements'],a:1,e:'During an emergency evacuation, turnstile attendance records allow the site team to confirm every person on site is accounted for and safe.'},
+{q:'What should a cadet do if they observe someone attempting to bypass the turnstile?',o:['Ignore it — it is not a cadet\'s responsibility','Escort the person on site themselves to prevent confrontation','Report it immediately to the Site Manager — this is a serious WHS breach','Note it in the site diary and review with the team at the end of the week'],a:2,e:'Any bypass attempt must be reported to the Site Manager immediately. An uninducted worker on site is a serious WHS breach with potential legal consequences.'},
+{q:'What impact do uninducted workers on site have on insurance coverage?',o:['Insurance costs increase by a small loading','Insurance claims related to incidents involving those workers may be voided','No impact — all workers on site are covered regardless of induction status','The insurer issues a formal warning for the first occurrence only'],a:1,e:'Uninducted workers on site can void insurance coverage for incidents involving those workers — a significant financial and legal risk.'},
+{q:'What is a PCBU\'s duty under the WHS Act regarding site access?',o:['To ensure all workers carry photo identification','To ensure only inducted, safe workers can access the site','To ensure workers have a minimum of 10 years\' construction experience','To ensure all visitors are banned from construction sites'],a:1,e:'A PCBU (Person Conducting a Business or Undertaking) has a duty under the WHS Act to ensure only inducted and competent workers can access the site.'},
+{q:'What credential types does the Builtcom turnstile system support?',o:['Business card and handshake with a supervisor','Physical ID card shown to a security guard','QR code, RFID card, or mobile app — all registered and managed in Plexa','Username and password entered manually at a site kiosk'],a:2,e:'The system supports QR codes, RFID cards, and mobile app access — all managed through Plexa following site induction completion.'},
+{q:'How does the turnstile system automatically support the site diary man count?',o:['The system emails a daily man count report to the project manager','Entry and exit timestamps recorded in Plexa enable verification of who was on site and when','Workers self-report their attendance directly in Plexa each morning','The site manager manually checks turnstile logs each afternoon'],a:1,e:'Turnstile entry/exit data in Plexa provides an automatic and accurate attendance record that can be used to verify and cross-check site diary man counts.'},
+{q:'What is the correct procedure for a visitor accessing a Builtcom site?',o:['Visitors can enter freely with valid photo ID','Visitors must sign in through the correct visitor procedure and be escorted by a Builtcom team member','Visitors complete the full worker induction before entering','Visitors pay a daily site access fee and proceed unescorted'],a:1,e:'Visitors must follow the correct sign-in procedure and be escorted by an authorised Builtcom team member at all times on site.'}
+]},
+
+{id:'attendance',num:'08',title:'Workforce Attendance',desc:'Monitoring workforce numbers, verifying attendance, and using data to track productivity and program delivery.',duration:'20 min',questions:10,
+content:[{ey:'Overview',h:'Workforce Attendance',body:'Records worker numbers, trade classification, and hours — for safety, productivity, and cost control.'},
+{ey:'Sources',h:'Data Capture',body:'Plexa turnstile (automatic) cross-referenced with site diary man counts (manual).'},
+{ey:'Analysis',h:'Reading the Data',body:'Sudden drop = investigate. Consistent low numbers = escalate. Zero attendance from critical trade = emergency.'},
+{ey:'Value',h:'Programme Management',body:'Attendance data identifies resourcing risks early — one of the most valuable cadet skills.'}],
+quiz:[
+{q:'Why is daily workforce man count important on a construction site?',o:['It satisfies visitor registration requirements only','It enables workforce tracking, productivity analysis, cost control, and safety compliance','It is required for subcontractor payroll processing only','It is a council requirement for sites in urban areas'],a:1,e:'Man count enables workforce tracking, productivity analysis, labour cost verification, and accurate emergency headcounts — all simultaneously.'},
+{q:'What does consistently lower than programmed workforce numbers indicate?',o:['The project is running ahead of schedule with reduced resources required','Construction programme delays due to subcontractor under-resourcing','Improved site safety due to lower numbers and less congestion','Reduced project costs — less labour means lower cost'],a:1,e:'Consistently low numbers mean the subcontractor is under-resourcing the site, which directly threatens programme delivery.'},
+{q:'What does a sudden, unexpected drop in workforce numbers on site suggest?',o:['The project is ahead of programme and workers have been stood down','A potential programme delay risk — investigate the cause immediately','Workers are attending an approved team outing or site visit','The programme has been officially revised with fewer resources needed'],a:1,e:'A sudden manpower drop is a red flag. Investigate the cause immediately — it may indicate a dispute, resourcing failure, or other programme risk.'},
+{q:'What two systems does Builtcom use to capture and cross-reference attendance data?',o:['Email logs and paper visitor register','Plexa turnstile data (automatic) and site diary man counts (manual)','CCTV footage review and payroll records','Mobile phone location tracking and supervisor verbal reports'],a:1,e:'Builtcom uses Plexa-integrated turnstile data (automated) cross-referenced with site diary man counts (manual) for accuracy.'},
+{q:'What does "trade overpopulation" mean and what risk does it create?',o:['Having too many suppliers bidding for the same package — creates pricing confusion','Too many workers from one trade in a work zone — creating congestion, safety risks, and reduced individual productivity','Having more managers than workers on site — creating supervision gaps','Workers from different trades in the same area — creating professional conflicts'],a:1,e:'Trade overpopulation means too many workers are concentrated in a work area, creating congestion, safety hazards, and reduced productivity.'},
+{q:'How does attendance tracking directly support project cost control?',o:['By automatically approving subcontractor invoices when attendance thresholds are met','By verifying that labour hours billed by subcontractors match actual hours recorded on site through turnstile and diary data','By negotiating lower labour rates based on historical attendance trends','By reducing the number of workers required and therefore reducing the labour budget'],a:1,e:'Attendance records allow the site team to verify that hours billed in subcontractor invoices match actual time recorded on site — preventing overbilling.'},
+{q:'What action must be taken if zero attendance is recorded for a critical trade?',o:['Assume they are running late and will arrive later that day','Note it at the end of the week in the site diary','Notify the project manager immediately — this is an emergency resourcing failure','Send a polite email to the subcontractor and await their response'],a:2,e:'Zero attendance from a critical trade is an emergency. Every hour without that trade has a direct programme impact. Notify the project manager immediately.'},
+{q:'How does attendance data support WHS emergency management?',o:['It reduces the number of safety inspections required on site','Accurate turnstile records provide a precise list of who is on site for emergency evacuation headcounts and first responders','It automatically notifies emergency services when numbers drop below a threshold','It reduces the need for SWMS documentation on high-risk works'],a:1,e:'Turnstile attendance records mean the site team can account for every person on site during an emergency — a critical WHS requirement.'},
+{q:'What is the consequence of a subcontractor consistently under-resourcing their works on site?',o:['They receive a bonus for cost efficiency and delivering under budget','Their contract scope is redistributed to other trades at no additional cost to the project','The project timeline is at risk — formal escalation and a Subcontractor Performance Notice may be issued','No consequence — the construction programme automatically adjusts to absorb the lower resources'],a:2,e:'Consistent under-resourcing puts the programme at risk. It must be escalated formally so the subcontractor can be held contractually accountable.'},
+{q:'Why is cross-referencing turnstile data with site diary man counts important?',o:['To satisfy the building certifier\'s attendance audit requirements','To verify accuracy and identify any discrepancies between the automated (turnstile) and manual (diary) records','To prepare the weekly project report for the client','To determine which subcontractor should be demobilised first'],a:1,e:'Cross-referencing both sources confirms data accuracy and highlights any discrepancies between automated and manually recorded attendance figures.'}
+]},
+
+{id:'frp',num:'09',title:'FRP & Construction Processes',desc:'Formwork, Reinforcement & Pour cycle, plan reading, excavation, and finishes — the technical core.',duration:'40 min',questions:12,
+content:[{ey:'Process',h:'FRP Cycle',body:'Formwork → Reinforcement → ITP Hold Point → Pour → Cure (28 days) → Strip.'},
+{ey:'Critical',h:'Reinforcement Hold Point',body:'Concrete MUST NOT be poured until the structural engineer signs off the ITP. Reinforcement cannot be verified after pour.'},
+{ey:'Materials',h:'Concrete Grades',body:'20 MPa = blinding only. 32 MPa = standard structural. 40 MPa = PT slabs. 50 MPa+ = transfer structures.'},
+{ey:'Drawings',h:'Plan Reading',body:'Title block, grid lines, revision clouds, structural vs architectural drawings, services coordination.'},
+{ey:'Below Ground',h:'Excavation & Footings',body:'Pad, strip, raft, piles — chosen by geotechnical engineer. Blinding concrete below all structural footings.'},
+{ey:'Finishes',h:'Trade Sequencing',body:'Lock-up → waterproofing Hold Point → tiling → Gyprock → fit-off. Correct sequence prevents costly rework.'}],
+quiz:[
+{q:'What does FRP stand for in structural concrete construction?',o:['Floor, Roof, Penetration','Formwork, Reinforcement, Pour','Footing, Rebar, Placement','Frame, Render, Paint'],a:1,e:'FRP = Formwork, Reinforcement, Pour — the three-stage sequential cycle for constructing all structural concrete elements.'},
+{q:'Why is the reinforcement ITP Hold Point mandatory before a concrete pour?',o:['To allow the structural engineer time to invoice for their site visit','Because once concrete is poured, the reinforcement inside cannot be inspected or verified','To give the site manager time to photograph the reinforcement for marketing','To ensure the formwork has fully cured before concrete is added'],a:1,e:'Once concrete is poured, the reinforcement is permanently encased and cannot be inspected. The Hold Point is the only opportunity to verify compliance.'},
+{q:'What concrete strength is typically specified for standard commercial structural floor slabs?',o:['10 MPa','20 MPa (blinding mix)','32 MPa','100 MPa'],a:2,e:'32 MPa is the standard structural concrete grade for most residential and commercial construction. 20 MPa is used for blinding/lean mix only.'},
+{q:'What is "slump" in a concrete specification and why does it matter?',o:['The amount of concrete wasted and spilled during the pour','A measure of concrete workability (flow) specified in millimetres by the structural engineer','The time allowed for concrete to reach full design strength','The minimum pour thickness required for a structural slab'],a:1,e:'Slump measures concrete workability. The engineer specifies slump to control how the concrete flows during placement and compacts with vibration.'},
+{q:'What is the purpose of the "cure" stage in the FRP cycle?',o:['Removing the formwork as quickly as possible to reuse it','Applying a chemical sealant coating to the finished surface','Allowing poured concrete to achieve sufficient design strength before loading or stripping','Cleaning and preparing the formwork for the next pour'],a:2,e:'Curing is the period after pouring where concrete gains strength. Full design strength (e.g. 32 MPa) is typically reached at 28 days.'},
+{q:'What is "blinding" concrete and where is it used?',o:['A decorative polished finish applied to exposed concrete surfaces','A low-strength (typically 20 MPa) concrete layer placed below structural footings to create a clean, level working surface','The first full structural pour of the basement slab','Concrete used to seal window and door penetrations'],a:1,e:'Blinding (lean mix ~20 MPa) creates a clean, level, and stable surface below structural footings for reinforcement installation.'},
+{q:'What does "lock-up stage" mean in construction finishes?',o:['When the building is first locked by the site security team','When the building is weathertight — roof, external windows, and doors are all installed and the building is protected','The final handover of building keys to the client at Practical Completion','When the structural frame is complete at the highest level'],a:1,e:'Lock-up stage = the building is weathertight. The roof, windows, and external doors are installed, protecting internal works from weather.'},
+{q:'Why is trade sequencing critical in the finishes stage of construction?',o:['It determines which subcontractor is paid first in the progress claim','To ensure trades work in the correct order, preventing damage to completed works and eliminating costly rework','To determine the colour palette and finishes specification for the building','To allocate parking spaces and site amenities to each trade fairly'],a:1,e:'Correct sequencing prevents later trades from damaging earlier completed works — for example, tilers must follow waterproofing approval, painters follow lining.'},
+{q:'What does a "revision cloud" on a construction drawing indicate?',o:['A design element incorporating natural or curved forms','An area of the drawing that has been modified since the previous revision — review changes carefully','A poorly drawn or low-quality area of the drawing that needs reissuing','The location of stormwater drainage elements on the drawing'],a:1,e:'Revision clouds mark areas of a drawing that have changed since the last revision. Always identify what changed and how it affects current works on site.'},
+{q:'What is the role of the geotechnical engineer during the excavation phase?',o:['To manage the construction programme and sequencing of excavation works','To advise on ground conditions, soil classification, bearing capacity, and foundation design based on site investigation data','To coordinate with the architect on basement floor finishes and slab thickness','To manage waterproofing design for the basement structure'],a:1,e:'The geotechnical engineer advises on ground conditions, soil bearing capacity, and foundation requirements based on borehole and CPT investigation results.'},
+{q:'What is post-tensioning (PT) in a structural concrete slab?',o:['Adding additional reinforcement after the concrete pour is complete','A high-strength steel tendon system stressed after concrete reaches sufficient strength, enabling longer column-free spans','Pouring concrete in multiple stages to reduce thermal cracking','A type of waterproofing membrane applied after construction is complete'],a:1,e:'Post-tensioning uses high-strength steel tendons stressed after concrete cures. This dramatically increases the slab\'s capacity, enabling longer spans without intermediate columns.'},
+{q:'Which finishes activity requires an ITP Hold Point inspection before the next trade can proceed?',o:['Installing Gyprock wall lining before painting','Waterproofing of wet areas and balconies before any tiles, screed, or topping is placed','Fit-off of door hardware before painting the doors','Electrical rough-in before plasterboard lining'],a:1,e:'Waterproofing is a critical Hold Point. Tiles, screed, or topping must NOT be placed until the waterproofing has been inspected and formally approved.'}
+]}
+];
+
+/* ═══ STATE ═══ */
+const ST={mod:null,quiz:[],qNum:0,answers:[],scores:{},learned:{}};
+
+/* ═══ APP ═══ */
+const APP={
+goTo(id){
+  document.querySelectorAll('#academy-overlay .screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if(id==='s-dashboard')this.refreshDash();
+  if(id==='s-cert')this.renderCert();
+},
+
+refreshDash(){
+  const done=MODULES.filter(m=>ST.scores[m.id]?.pass).length;
+  const passScores=Object.values(ST.scores).filter(s=>s.pass).map(s=>s.pct);
+  const avg=passScores.length?Math.round(passScores.reduce((a,b)=>a+b,0)/passScores.length):null;
+  const pct=Math.round((done/MODULES.length)*100);
+
+  document.getElementById('stat-done').textContent=done;
+  document.getElementById('stat-avg').textContent=avg!==null?avg+'%':'—';
+  document.getElementById('sb-pct').textContent=pct+'%';
+  document.getElementById('sb-bar').style.width=pct+'%';
+
+  if(done===MODULES.length){
+    document.getElementById('stat-status').textContent='🎓 Complete!';
+    document.getElementById('stat-sub').textContent='All 9 modules passed';
+    document.getElementById('cert-btn').disabled=false;
+  } else {
+    document.getElementById('stat-status').textContent='In Progress';
+    document.getElementById('stat-sub').textContent=done+' of 9 passed';
+    document.getElementById('cert-btn').disabled=true;
+  }
+
+  // Sidebar nav
+  const nav=document.getElementById('sb-nav');
+  nav.innerHTML='<div class="sb-section-label">Modules</div>';
+  MODULES.forEach(m=>{
+    const sc=ST.scores[m.id];
+    const cls=sc?.pass?'s-completed':(sc&&!sc.pass?'s-failed':'');
+    nav.innerHTML+=`<div class="sb-item ${cls}" onclick="APP.openModule('${m.id}')">
+      <div class="sb-icon">${m.num}</div><span style="flex:1">${m.title}</span><span class="sb-check"></span>
+    </div>`;
+  });
+
+  // Module grid
+  const grid=document.getElementById('module-grid');
+  grid.innerHTML='';
+  MODULES.forEach(m=>{
+    const sc=ST.scores[m.id];
+    let st='s-available',bl='Available';
+    if(sc?.pass){st='s-completed';bl='Passed ✓';}
+    else if(sc&&!sc.pass){st='s-failed';bl='Failed — Retry';}
+    const bar=sc?`<div class="mc-score">
+      <div style="display:flex;justify-content:space-between;font-size:.72rem;margin-bottom:.3rem;">
+        <span style="color:var(--muted)">Last score</span>
+        <span style="color:${sc.pass?'var(--lime)':'var(--red)'}">${sc.pct}%</span>
+      </div>
+      <div class="mc-score-bar"><div class="mc-score-fill" style="width:${sc.pct}%;background:${sc.pass?'var(--lime)':'var(--red)'}"></div></div>
+    </div>`:'';
+    grid.innerHTML+=`<div class="module-card ${st}" onclick="APP.openModule('${m.id}')">
+      <div class="mc-head"><div class="mc-num">${m.num}</div><span class="mc-badge ${st}">${bl}</span></div>
+      <div class="mc-title">${m.title}</div>
+      <div class="mc-desc">${m.desc}</div>
+      <div class="mc-meta"><span>📖 ${m.duration}</span><span>❓ ${m.questions} questions</span></div>
+      ${bar}
+    </div>`;
+  });
+},
+
+openModule(id){
+  const m=MODULES.find(x=>x.id===id);
+  ST.mod=m;
+  document.getElementById('learn-title').textContent=m.num+' — '+m.title;
+  const sc=ST.scores[id];
+  const btn=document.getElementById('start-assess-btn');
+  btn.textContent=sc?.pass?'Retake Assessment →':(sc?'Retry Assessment →':'Take Assessment →');
+  const note=document.getElementById('learn-score-note');
+  note.textContent=sc?`Last score: ${sc.pct}% — ${sc.pass?'PASSED':'FAILED'}`:'Complete the reading below, then take the assessment.';
+
+  // TOC
+  const toc=document.getElementById('learn-toc');
+  toc.innerHTML='';
+  m.content.forEach((s,i)=>{
+    toc.innerHTML+=`<div class="toc-item${i===0?' active':''}" onclick="APP.scrollSec(${i})">${s.h}</div>`;
+  });
+
+  // Content
+  const main=document.getElementById('learn-main');
+  main.innerHTML='';
+  m.content.forEach((s,i)=>{ main.innerHTML+=this.buildSection(s,i); });
+
+  this.goTo('s-learn');
+},
+
+buildSection(s,i){
+  let h=`<div class="learn-section" id="ls-${i}">
+    <div class="ls-eyebrow">${s.ey||''}</div>
+    <div class="ls-heading">${s.h}</div>
+    <div class="ls-divider"></div>
+    <div class="ls-body">`;
+  if(s.body)h+=`<p>${s.body}</p>`;
+  if(s.list){
+    h+=`<ul class="info-list">`;
+    s.list.forEach(it=>{h+=`<li>${it}</li>`;});
+    h+=`</ul>`;
+  }
+  if(s.steps){
+    h+=`<div class="three-step">`;
+    s.steps.forEach(st=>{h+=`<div class="step-item"><div class="step-num">${st.n}</div><div class="step-label">${st.l}</div><div class="step-desc">${st.d}</div></div>`;});
+    h+=`</div>`;
+  }
+  if(s.callout){
+    const cls=s.callout.t==='warn'?'warning-box':'callout-box';
+    h+=`<div class="${cls}"><p>${s.callout.txt}</p></div>`;
+  }
+  h+=`</div></div>`;
+  return h;
+},
+
+scrollSec(i){
+  const el=document.getElementById('ls-'+i);
+  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+  document.querySelectorAll('.toc-item').forEach((t,ti)=>t.classList.toggle('active',ti===i));
+},
+
+startAssessment(){
+  const m=ST.mod;
+  const shuffled=[...m.quiz].sort(()=>Math.random()-.5);
+  ST.quiz=shuffled.slice(0,m.questions);
+  ST.qNum=0;
+  ST.answers=new Array(m.questions).fill(null);
+  document.getElementById('assess-title').textContent=m.num+' — '+m.title;
+  this.goTo('s-assess');
+  this.renderQ();
+},
+
+renderQ(){
+  const q=ST.quiz[ST.qNum];
+  const total=ST.quiz.length;
+  const num=ST.qNum+1;
+  const pct=Math.round(((num-1)/total)*100);
+  document.getElementById('assess-counter').textContent=`Q ${num} / ${total}`;
+  document.getElementById('assess-pct-label').textContent=pct+'%';
+  document.getElementById('assess-prog').style.width=pct+'%';
+  const lets=['A','B','C','D'];
+  let html=`<div class="q-card">
+    <div class="q-eyebrow">Question ${num} of ${total} &nbsp;·&nbsp; ${ST.mod.title}</div>
+    <div class="q-text">${q.q}</div>
+    <div class="q-options" id="q-opts">`;
+  q.o.forEach((opt,i)=>{
+    html+=`<button class="q-opt" onclick="APP.answer(${i})" id="opt-${i}">
+      <span class="q-opt-letter">${lets[i]}</span>${opt}
+    </button>`;
+  });
+  html+=`</div><div id="q-fb"></div></div>
+  <div class="q-nav">
+    <span class="ans-count">${this.countAns()} of ${total} answered</span>
+    <button class="btn-next" id="btn-next" onclick="APP.nextQ()" disabled>${num===total?'Submit Assessment →':'Next Question →'}</button>
+  </div>`;
+  document.getElementById('assess-wrap').innerHTML=html;
+},
+
+countAns(){return ST.answers.filter(a=>a!==null).length;},
+
+answer(i){
+  const q=ST.quiz[ST.qNum];
+  if(ST.answers[ST.qNum]!==null)return;
+  ST.answers[ST.qNum]=i;
+  const ok=i===q.a;
+  document.querySelectorAll('.q-opt').forEach((b,bi)=>{
+    b.disabled=true;
+    if(bi===i)b.classList.add(ok?'correct':'wrong');
+    if(!ok&&bi===q.a)b.classList.add('reveal-correct');
+  });
+  document.getElementById('q-fb').innerHTML=
+    `<div class="q-feedback ${ok?'correct-fb':'wrong-fb'}">${ok?'✓ Correct':'✗ Incorrect'} — ${q.e}</div>`;
+  document.getElementById('btn-next').disabled=false;
+  document.querySelector('.ans-count').textContent=this.countAns()+' of '+ST.quiz.length+' answered';
+},
+
+nextQ(){
+  if(ST.qNum<ST.quiz.length-1){ST.qNum++;this.renderQ();}
+  else{this.submitAssess();}
+},
+
+submitAssess(){
+  const m=ST.mod;
+  let correct=0;
+  ST.quiz.forEach((q,i)=>{if(ST.answers[i]===q.a)correct++;});
+  const pct=Math.round((correct/ST.quiz.length)*100);
+  const pass=pct>=80;
+  ST.scores[m.id]={score:correct,total:ST.quiz.length,pct,pass};
+  document.getElementById('assess-prog').style.width='100%';
+  document.getElementById('assess-pct-label').textContent='100%';
+  this.renderResult(m,correct,ST.quiz.length,pct,pass);
+  this.goTo('s-result');
+},
+
+renderResult(m,correct,total,pct,pass){
+  const circ=2*Math.PI*52;
+  const off=circ-(pct/100)*circ;
+  let html=`<div class="result-icon">${pass?'🎉':'📚'}</div>
+  <div class="result-status ${pass?'pass':'fail'}">${pass?'Module Passed':'Not Quite'}</div>
+  <p style="color:var(--muted);font-size:.9rem;margin-bottom:.5rem">${m.num} — ${m.title}</p>
+  <div class="result-score-ring">
+    <svg width="140" height="140" viewBox="0 0 140 140">
+      <circle class="ring-bg" cx="70" cy="70" r="52"/>
+      <circle class="ring-fill ${pass?'ring-pass':'ring-fail'}" cx="70" cy="70" r="52"
+        stroke-dasharray="${circ}" stroke-dashoffset="${circ}"
+        transform="rotate(-90 70 70)" id="ring-anim"/>
+    </svg>
+    <div class="ring-score">${pct}<span>%</span></div>
+  </div>
+  <div class="result-detail"><h4>Score Breakdown</h4>
+    <div class="rd-row"><span class="label">Correct answers</span><span class="val">${correct} / ${total}</span></div>
+    <div class="rd-row"><span class="label">Your score</span><span class="val ${pass?'pass':'fail'}">${pct}%</span></div>
+    <div class="rd-row"><span class="label">Pass mark</span><span class="val">80%</span></div>
+    <div class="rd-row"><span class="label">Result</span><span class="val ${pass?'pass':'fail'}">${pass?'PASSED ✓':'FAILED ✗'}</span></div>
+  </div>`;
+  if(!pass)html+=`<div class="callout-info"><p><strong>You need 80% to pass.</strong> Review the module content carefully — focus on the areas where you made errors — then retake the assessment.</p></div>`;
+  html+=`<div class="result-answers"><h4>Full Answer Review</h4>`;
+  ST.quiz.forEach((q,i)=>{
+    const sel=ST.answers[i];
+    const ok=sel===q.a;
+    html+=`<div class="ans-item ${ok?'ans-ok':'ans-ng'}">
+      <div class="ans-q">Q${i+1}: ${q.q}</div>
+      <div class="ans-your">${ok?'✓':'✗'} Your answer: ${sel!==null?q.o[sel]:'Not answered'}</div>
+      ${!ok?`<div class="ans-correct-a">✓ Correct: ${q.o[q.a]}</div>`:''}
+    </div>`;
+  });
+  html+=`</div><div class="result-actions">
+    <button class="btn-secondary" onclick="APP.openModule('${m.id}')">Review Content</button>
+    ${pass?`<button class="btn-primary" onclick="APP.goTo('s-dashboard')">Back to Dashboard →</button>`:
+           `<button class="btn-primary" onclick="APP.startAssessment()">Retake Assessment →</button>`}
+  </div>`;
+  document.getElementById('result-wrap').innerHTML=html;
+  setTimeout(()=>{const r=document.getElementById('ring-anim');if(r)r.style.strokeDashoffset=off;},300);
+},
+
+renderCert(){
+  const allPass=MODULES.every(m=>ST.scores[m.id]?.pass);
+  if(!allPass){document.getElementById('cert-wrap').innerHTML='<p style="text-align:center;color:#555;padding:4rem">Complete all 9 modules at 80% to unlock your certificate.</p>';return;}
+  const avg=Math.round(MODULES.map(m=>ST.scores[m.id]?.pct||0).reduce((a,b)=>a+b,0)/MODULES.length);
+  const today=new Date().toLocaleDateString('en-AU',{day:'numeric',month:'long',year:'numeric'});
+  const certName=currentUser?.name||'Builtcom Cadet';
+  let html=`<div class="cert-card">
+    <div class="cert-logo-txt">BUILT<span>COM</span></div>
+    <div style="font-size:.65rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:4px">powered by conquest</div>
+    <div class="cert-title">Certificate of Completion</div>
+    <div style="font-size:.7rem;color:var(--muted,#555);letter-spacing:2px;text-transform:uppercase;margin-bottom:.3rem">Awarded to</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;color:#c8e600;letter-spacing:1px;margin-bottom:.4rem">${certName}</div>
+    <div style="font-size:.75rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:.5rem">This certifies completion of the</div>
+    <div style="font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:.5rem">Builtcom Cadet Program Academy</div>
+    <div style="color:var(--muted);font-size:.85rem;line-height:1.7;margin:1rem 0">
+      All nine core competency modules have been completed with an average score of
+      <strong style="color:var(--lime)">${avg}%</strong>, meeting the 80% minimum competency threshold for each module.
+      This cadet has demonstrated the foundational knowledge required to deliver excellence on Builtcom construction projects.
+    </div>
+    <div class="cert-modules">`;
+  MODULES.forEach(m=>{
+    const sc=ST.scores[m.id];
+    html+=`<span class="cert-mod-tag">${m.num} ${m.title} — ${sc.pct}%</span>`;
+  });
+  html+=`</div>
+    <div style="display:inline-flex;align-items:center;gap:.5rem;background:rgba(200,230,0,.06);border:1px solid rgba(200,230,0,.15);color:var(--lime);font-size:.7rem;padding:5px 14px;margin-top:1rem">✓ All modules passed at ≥80%</div>
+    <div style="font-size:.75rem;color:var(--muted2);margin-top:1.5rem">Issued: ${today} · Builtcom Constructions Pty Ltd · Level 1, 15 George Street, Burwood NSW 2134</div>
+  </div>`;
+  document.getElementById('cert-wrap').innerHTML=html;
+}
+};
+
+APP.refreshDash();
+
+</script>
+</body>
+</html>
